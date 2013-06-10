@@ -16,6 +16,6 @@ md5sums=(SKIP
          'cc4d16eecbf7c4dd9bdf23694a447b8b')
 
 package() {  
-  mkdir -p "$pkgdir/usr/share/X11/xkb/symbols/"
-  install -Dm644 "$srcdir/$pkgname/sv-dvorak-extended" "$pkgdir/usr/share/X11/xkb/symbols/sv-dvorak-extended"
+  mkdir -p ${pkgdir}/usr/share/X11/xkb/symbols/
+  install -Dm644 ${srcdir}/${pkgname}/sv-dvorak-extended ${pkgdir}/usr/share/X11/xkb/symbols/sv-dvorak-extended
 }
