@@ -29,6 +29,8 @@ build() {
 package() {
   cd ${srcdir}/beets
   python2 setup.py install --root=${pkgdir}
+
+  install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 } 
 
 pkgver() {
