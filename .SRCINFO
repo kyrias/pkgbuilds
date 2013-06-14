@@ -3,7 +3,7 @@
 pkgbase = beets-git
 	pkgdesc = Flexible music library manager and tagger - git version
 	pkgver = 20130614
-	pkgrel = 1
+	pkgrel = 2
 	url = http://beets.radbox.org/
 	arch = any
 	license = MIT
