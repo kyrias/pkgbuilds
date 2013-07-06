@@ -13,7 +13,7 @@ pkgbase = sv-dvorak-extended
 	source = git+https://github.com/kyrias/sv-dvorak-extended.git
 	source = sv-dvorak-extended.install
 	md5sums = SKIP
-	md5sums = cc4d16eecbf7c4dd9bdf23694a447b8b
+	md5sums = 0103cae034454383b00e36f3abd1fd9c
 
 pkgname = sv-dvorak-extended
 

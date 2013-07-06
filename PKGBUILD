@@ -12,8 +12,8 @@ makedepends=('git')
 install='sv-dvorak-extended.install'
 source=('git+https://github.com/kyrias/sv-dvorak-extended.git'
         'sv-dvorak-extended.install')
-md5sums=(SKIP
-         'cc4d16eecbf7c4dd9bdf23694a447b8b')
+md5sums=('SKIP'
+         '0103cae034454383b00e36f3abd1fd9c')
 
 package() {  
   mkdir -p ${pkgdir}/usr/share/X11/xkb/symbols/
