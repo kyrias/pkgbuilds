@@ -1,4 +1,4 @@
-# Maintainer: Johannes Löthberg <kyrias@archlinux.info>
+# Maintainer: Johannes Löthberg <demizide@gmail.com>
 # Contributor: Gaetan Bisson <bisson@archlinux.org>
 
 pkgname=quassel-light
