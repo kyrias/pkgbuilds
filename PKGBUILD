@@ -19,19 +19,21 @@ source=("http://quassel-irc.org/pub/quassel-$pkgver.tar.bz2"
 		'quassel.service'
 		'quassel.conf')
 
+sha256sums=('39e97bd67160d6575a57d4f71c4b1be5c13461ca238baef462ab43164419864e'
+			'91a1aaae47d41c11aa418dd560039ddbbfb659e02b86379d8c4789c5ada362d3'
+			'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
 
 build() {
 	cd "$srcdir"/quassel-$pkgver
 
-	cmake \
-		-DCMAKE_INSTALL_PREFIX=/usr/ \
-		-DWITH_KDE=OFF \
-		-DWITH_WEBKIT=OFF \
-		-DWITH_PHONON=OFF \
-		-DWITH_LIBINDICATE=OFF \
-		-DCMAKE_BUILD_TYPE="Release" \
-		../quassel-${pkgver}/ \
-		-Wno-dev
+	cmake	-DCMAKE_INSTALL_PREFIX=/usr/ \
+			-DWITH_KDE=OFF \
+			-DWITH_WEBKIT=OFF \
+			-DWITH_PHONON=OFF \
+			-DWITH_LIBINDICATE=OFF \
+			-DCMAKE_BUILD_TYPE="Release" \
+			../quassel-${pkgver}/ \
+			-Wno-dev
 
 	make
 }
@@ -41,11 +43,10 @@ package() {
 	make DESTDIR="${pkgdir}" install
 
 	install -Dm644 "${srcdir}"/quassel.service \
-		"${pkgdir}"/usr/lib/systemd/system/quassel.service
+				   "${pkgdir}"/usr/lib/systemd/system/quassel.service
+
 	install -Dm644 "${srcdir}"/quassel.conf \
-		"${pkgdir}"/etc/conf.d/quassel
+				   "${pkgdir}"/etc/conf.d/quassel
 }
 
-sha256sums=('39e97bd67160d6575a57d4f71c4b1be5c13461ca238baef462ab43164419864e'
-            '91a1aaae47d41c11aa418dd560039ddbbfb659e02b86379d8c4789c5ada362d3'
-            'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
+# vim: set ts=4 sw=4 noet:
