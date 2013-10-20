@@ -24,7 +24,7 @@ sha256sums=('39e97bd67160d6575a57d4f71c4b1be5c13461ca238baef462ab43164419864e'
 			'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
 
 build() {
-	cd "$srcdir"/quassel-$pkgver
+	cd quassel-$pkgver
 
 	cmake	-DCMAKE_INSTALL_PREFIX=/usr/ \
 			-DWITH_KDE=OFF \
@@ -38,7 +38,7 @@ build() {
 }
 
 package() {
-	cd "$srcdir"/quassel-$pkgver
+	cd quassel-$pkgver
 	make DESTDIR="$pkgdir" install
 
 	install -Dm644 "$srcdir"/quassel.service \
