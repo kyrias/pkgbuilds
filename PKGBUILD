@@ -1,5 +1,5 @@
-# Maintainer: Johannes Löthberg <demizide@gmail.com>
-# Contributor: Adrian Sampson <adrian@radbox.org>
+# Maintainer: Adrian Sampson <adrian@radbox.org>
+# Contributor: Johannes Löthberg <johannes@kyriasis.com>
 
 pkgname=beets-git
 pkgver=20130614
@@ -9,7 +9,7 @@ arch=('any')
 url="http://beets.radbox.org/"
 license=('MIT')
 depends=('python2-munkres' 'mutagen'
-		 'python2-distribute' 'python2-unidecode'
+		 'python2-setuptools' 'python2-unidecode'
 		 'python2-musicbrainzngs' 'python2-yaml') 
 makedepends=('git')
 optdepends=('python2-pyacoustid: acoustic fingerprinting'
@@ -27,15 +27,15 @@ pkgver() {
 }
 
 build() {
-	cd ${srcdir}/beets
+	cd "$srcdir"/beets
 	python2 setup.py build
 }
 
 package() {
-	cd ${srcdir}/beets
-	python2 setup.py install --root=${pkgdir} --optimize=1
+	cd "$srcdir"/beets
+	python2 setup.py install --root="$pkgdir" --optimize=1
 
-	install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+	install -D -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 } 
 
 # vim: set ts=4 sw=4 noet:
