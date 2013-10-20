@@ -22,17 +22,17 @@ source=('git://github.com/sampsyo/beets.git')
 md5sums=('SKIP')
 
 pkgver() {
-	cd "$srcdir"/beets
+	cd beets
 	printf "%s" "$(git describe --tags --long | sed 's/^v//;s/-/-r/' | tr - .)" 
 }
 
 build() {
-	cd "$srcdir"/beets
+	cd beets
 	python2 setup.py build
 }
 
 package() {
-	cd "$srcdir"/beets
+	cd beets
 	python2 setup.py install --root="$pkgdir" --optimize=1
 
 	install -D -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
