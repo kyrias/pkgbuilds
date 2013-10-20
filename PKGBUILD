@@ -1,4 +1,4 @@
-# Maintainer: Johannes Löthberg <demizide@gmail.com>
+# Maintainer: Johannes Löthberg <johannes@kyriasis.com>
 # Contributor: Vinícius dos Santos Oliveira <vini.ipsmaker@gmail.com>
 # Contributor: Emmanuel Gil Peyrot <linkmauve@linkmauve.fr>
 
