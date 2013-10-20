@@ -2,8 +2,8 @@
 # Contributor: Johannes Löthberg <johannes@kyriasis.com>
 
 pkgname=beets-git
-pkgver=20130614
-pkgrel=2
+pkgver=1.3.1.r35.gc82cd29
+pkgrel=1
 pkgdesc="Flexible music library manager and tagger - git version"
 arch=('any')
 url="http://beets.radbox.org/"
@@ -22,8 +22,8 @@ source=('git://github.com/sampsyo/beets.git')
 md5sums=('SKIP')
 
 pkgver() {
-	cd ${srcdir}/beets
-	echo $(date +%Y%m%d).$(git describe --always | sed 's|-|.|g')
+	cd "$srcdir"/beets
+	printf "%s" "$(git describe --tags --long | sed 's/^v//;s/-/-r/' | tr - .)" 
 }
 
 build() {
