@@ -32,7 +32,6 @@ build() {
 			-DWITH_PHONON=OFF \
 			-DWITH_LIBINDICATE=OFF \
 			-DCMAKE_BUILD_TYPE="Release" \
-			../quassel-${pkgver}/ \
 			-Wno-dev
 
 	make
@@ -40,13 +39,13 @@ build() {
 
 package() {
 	cd "$srcdir"/quassel-$pkgver
-	make DESTDIR="${pkgdir}" install
+	make DESTDIR="$pkgdir" install
 
-	install -Dm644 "${srcdir}"/quassel.service \
-				   "${pkgdir}"/usr/lib/systemd/system/quassel.service
+	install -Dm644 "$srcdir"/quassel.service \
+				   "$pkgdir"/usr/lib/systemd/system/quassel.service
 
-	install -Dm644 "${srcdir}"/quassel.conf \
-				   "${pkgdir}"/etc/conf.d/quassel
+	install -Dm644 "$srcdir"/quassel.conf \
+				   "$pkgdir"/etc/conf.d/quassel
 }
 
 # vim: set ts=4 sw=4 noet:
