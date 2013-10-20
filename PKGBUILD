@@ -14,11 +14,11 @@ source=('git+https://github.com/enkore/i3pystatus.git')
 md5sums=('SKIP')
 
 pkgver() {
-  cd "$srcdir"/i3pystatus
+  cd i3pystatus
   printf "%s" "$(git describe --always --long | sed 's/^v//;s/-/-r/' | tr - .)"
 }
 
 package() {
-  cd "$srcdir"/i3pystatus
+  cd i3pystatus
   python setup.py install --prefix=/usr --root="$pkgdir"
 } 
