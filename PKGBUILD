@@ -3,7 +3,7 @@
 
 pkgname=i3pystatus-git
 pkgdesc="i3status replacement written in python for the i3 window manager"
-pkgver=3.1.r149.g6a3090b
+pkgver=3.1.r151.g260cdfc
 pkgrel=1
 arch=('i686' 'x86_64')
 license=('mit')
