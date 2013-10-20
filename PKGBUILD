@@ -16,10 +16,10 @@ md5sums=('SKIP'
 		 '0103cae034454383b00e36f3abd1fd9c')
 
 package() {  
-	mkdir -p ${pkgdir}/usr/share/X11/xkb/symbols/
+	mkdir -p "$pkgdir"/usr/share/X11/xkb/symbols/
 
-	install -Dm644 ${srcdir}/${pkgname}/sv-dvorak-extended \
-				   ${pkgdir}/usr/share/X11/xkb/symbols/sv-dvorak-extended
+	install -Dm644 "$srcdir"/$pkgname/sv-dvorak-extended \
+				   "$pkgdir"/usr/share/X11/xkb/symbols/sv-dvorak-extended
 }
 
 # vim: set ts=4 sw=4 noet:
