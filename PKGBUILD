@@ -17,8 +17,7 @@ md5sums=('bda07a9d91a9dd8538d9a7a26562de69'
 		 '808282b4d6cf58dacf16fae6068bd030')
 
 package() {
-	install -Dd "$pkgdir"/opt/OpenHexagon1.92
-	cp -r OpenHexagon1.92/ "$pkgdir"/opt/
+	install -D OpenHexagon1.92	"$pkgdir"/opt/OpenHexagon1.92
 
 	install -Dd "$pkgdir"/usr/bin
 	ln -s /opt/OpenHexagon1.92/OpenHexagon "$pkgdir"/usr/bin/openhexagon
@@ -26,7 +25,7 @@ package() {
 	# Need world writeable Profiles for creating profiles and config for... config
 	chmod 777 "$pkgdir"/opt/OpenHexagon1.92/{Profiles,config.json}
 
-	install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+	install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
 }
 
 # vim: set ts=4 sw=4 noet:
