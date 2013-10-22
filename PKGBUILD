@@ -7,7 +7,7 @@
 
 pkgname=weechat-git
 pkgver=0.4.2.r24.g3088d31
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast, light & extensible IRC client (curses UI)"
 arch=('i686' 'x86_64')
 url="http://www.weechat.org/"
@@ -18,16 +18,16 @@ optdepends=('perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 provides=('weechat')
 conflicts=('weechat')
 options=(!libtool)
-source=("$pkgname::git://git.savannah.nongnu.org/weechat.git")
+source=("git://git.savannah.nongnu.org/weechat.git")
 md5sums=('SKIP')
 
 pkgver(){
-	cd $pkgname
+	cd weechat
 	printf "%s" "$(git describe --tags --long | sed 's/^v//; s/-/-r/' | tr - .)" 
 }
 
 build() {
-	cd $pkgname
+	cd weechat
 	cmake -DPREFIX=/usr \
 		  -DPYTHON_EXECUTABLE=/usr/bin/python2 \
 		  -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so\
@@ -38,7 +38,7 @@ build() {
 }
 
 package() {
-	make -C $pkgname DESTDIR="$pkgdir" install
+	make -C weechat DESTDIR="$pkgdir" install
 }
 
 # vim: set ts=4 sw=4 noet:
