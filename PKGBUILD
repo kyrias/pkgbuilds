@@ -13,13 +13,10 @@ install='sv-dvorak-extended.install'
 source=('git+https://github.com/kyrias/sv-dvorak-extended.git'
 		'sv-dvorak-extended.install')
 md5sums=('SKIP'
-		 '0103cae034454383b00e36f3abd1fd9c')
+		 'f6b9dc0d45e3742a865d39b8e20366b8')
 
 package() {  
-	mkdir -p "$pkgdir"/usr/share/X11/xkb/symbols/
-
-	install -Dm644 "$srcdir"/$pkgname/sv-dvorak-extended \
-				   "$pkgdir"/usr/share/X11/xkb/symbols/sv-dvorak-extended
+	install -Dm644 sv-dvorak-extended/sv-dvorak-extended "$pkgdir"/usr/share/X11/xkb/symbols/sv-dvorak-extended
 }
 
 # vim: set ts=4 sw=4 noet:
