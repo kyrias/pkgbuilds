@@ -17,9 +17,10 @@ md5sums=('bda07a9d91a9dd8538d9a7a26562de69'
 		 '808282b4d6cf58dacf16fae6068bd030')
 
 package() {
-	install -D OpenHexagon1.92	"$pkgdir"/opt/OpenHexagon1.92
+	install -d "$pkgdir"/opt/OpenHexagon1.92
+	cp -r OpenHexagon1.92 "$pkgdir"/opt/
 
-	install -Dd "$pkgdir"/usr/bin
+	install -d "$pkgdir"/usr/bin
 	ln -s /opt/OpenHexagon1.92/OpenHexagon "$pkgdir"/usr/bin/openhexagon
 
 	# Need world writeable Profiles for creating profiles and config for... config
