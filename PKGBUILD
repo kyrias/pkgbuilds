@@ -18,7 +18,7 @@ optdepends=('python2-pyacoustid: acoustic fingerprinting'
 			'python2-pylast: lastgenre plugin')
 provides=('beets')
 conflicts=('beets')
-source=('git://github.com/sampsyo/beets.git')
+source=('git+https://github.com/sampsyo/beets.git')
 md5sums=('SKIP')
 
 pkgver() {
@@ -34,7 +34,6 @@ build() {
 package() {
 	cd beets
 	python2 setup.py install --root="$pkgdir" --optimize=1
-
 	install -D -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 } 
 
