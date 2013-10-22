@@ -29,7 +29,6 @@ prepare() {
 package() {
 	cd clean
 	make INSTALL_DIR="$pkgdir"/opt/clean
-
 	mkdir -p "$pkgdir"/usr/{bin,share/man/man1}
 	ln -s /opt/clean/man/man1/clm.1.gz "$pkgdir"/usr/share/man/man1
 	install -Dm644 CleanLicenseConditions.txt "$pkgdir"/usr/share/licenses/clean/LICENSE
