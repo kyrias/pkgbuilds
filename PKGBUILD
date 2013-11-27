@@ -2,7 +2,7 @@
 # Contributor: Johannes Löthberg <johannes@kyriasis.com>
 
 pkgname=beets-git
-pkgver=1.3.1.r35.gc82cd29
+pkgver=1.3.1.r149.ge8d6c94
 pkgrel=1
 pkgdesc="Flexible music library manager and tagger - git version"
 arch=('any')
@@ -23,7 +23,7 @@ md5sums=('SKIP')
 
 pkgver() {
 	cd beets
-	printf "%s" "$(git describe --tags --long | sed 's/^v//;s/-/-r/' | tr - .)" 
+	git describe --tags --long | sed 's/^v//; s/-/-r/; s/-/./g'
 }
 
 build() {
