@@ -3,7 +3,7 @@
 
 pkgname=i3pystatus-git
 pkgdesc="i3status replacement written in python for the i3 window manager"
-pkgver=3.1.r188.ga4e6e54
+pkgver=git
 pkgrel=1
 arch=('i686' 'x86_64')
 license=('mit')
@@ -22,3 +22,5 @@ package() {
   cd i3pystatus
   python setup.py install --prefix=/usr --root="$pkgdir"
 } 
+
+# vim: set ts=4 sw=4 noet:
