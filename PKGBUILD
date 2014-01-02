@@ -31,3 +31,5 @@ package(){
 	mv "$pkgdir"/usr/share/doc/irssi-otr "$pkgdir"/usr/share/doc/xchat-otr
 	install -m 644 README.xchat ${pkgdir}/usr/share/doc/xchat-otr
 }
+
+# vim: set ts=4 sw=4 noet:
