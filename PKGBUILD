@@ -12,9 +12,9 @@ license=('GPL2')
 depends=('xchat' 'libotr3')
 makedepends=('cmake' 'pkgconfig' 'python')
 source=("http://download.tuxfamily.org/irssiotr/${pkgname}-${pkgver}.tar.gz"
-		'http://xchat.org/docs/xchat-plugin.h')
+				'http://xchat.org/docs/xchat-plugin.h')
 md5sums=('49706959af491c721a8a5a62bd224670'
-		 '5ee7da5abedc78a30b90e737370d8f0b')
+				 '5ee7da5abedc78a30b90e737370d8f0b')
 
 build() {
 	cd xchat-otr-$pkgver
@@ -32,4 +32,4 @@ package(){
 	install -m 644 README.xchat ${pkgdir}/usr/share/doc/xchat-otr
 }
 
-# vim: set ts=4 sw=4 noet:
+# vim: set ts=2 sts=2 sw=2 noet:
