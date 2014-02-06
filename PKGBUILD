@@ -34,4 +34,4 @@ package() {
 	install -Dm644 CleanLicenseConditions.txt "$pkgdir"/usr/share/licenses/clean/LICENSE
 }
 
-# vim: set ts=4 sw=4 noet:
+# vim: set ts=2 sts=2 sw=2 noet:
