@@ -29,11 +29,11 @@ pkgver(){
 build() {
 	cd weechat
 	cmake -DPREFIX=/usr \
-		  -DPYTHON_EXECUTABLE=/usr/bin/python2 \
-		  -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so\
-		  -DENABLE_MAN=ON \
-		  -DENABLE_DOC=OFF \
-		  -DWEECHAT_HOME=~/.config/weechat
+				-DPYTHON_EXECUTABLE=/usr/bin/python2 \
+				-DPYTHON_LIBRARY=/usr/lib/libpython2.7.so\
+				-DENABLE_MAN=ON \
+				-DENABLE_DOC=OFF \
+				-DWEECHAT_HOME=~/.config/weechat
 	make
 }
 
@@ -41,4 +41,4 @@ package() {
 	make -C weechat DESTDIR="$pkgdir" install
 }
 
-# vim: set ts=4 sw=4 noet:
+# vim: set ts=2 sts=2 sw=2 noet:
