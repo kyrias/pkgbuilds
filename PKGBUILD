@@ -9,13 +9,13 @@ arch=('any')
 url="http://beets.radbox.org/"
 license=('MIT')
 depends=('python2-munkres' 'mutagen'
-		 'python2-setuptools' 'python2-unidecode'
-		 'python2-musicbrainzngs' 'python2-yaml') 
+				 'python2-setuptools' 'python2-unidecode'
+				 'python2-musicbrainzngs' 'python2-yaml')
 makedepends=('git')
 optdepends=('python2-pyacoustid: acoustic fingerprinting'
-			'python2-flask: web interface'
-			'gstreamer0.10-python: BPD audio player plugin'
-			'python2-pylast: lastgenre plugin')
+						'python2-flask: web interface'
+						'gstreamer0.10-python: BPD audio player plugin'
+						'python2-pylast: lastgenre plugin')
 provides=('beets')
 conflicts=('beets')
 source=('git+https://github.com/sampsyo/beets.git')
@@ -35,6 +35,6 @@ package() {
 	cd beets
 	python2 setup.py install --root="$pkgdir" --optimize=1
 	install -D -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-} 
+}
 
-# vim: set ts=4 sw=4 noet:
+# vim: set ts=2 sts=2 sw=2 noet:
