@@ -9,14 +9,14 @@ url="http://github.com/kyrias/sv-dvorak-extended"
 license=('GPL')
 depends=('xorg-server')
 makedepends=('git')
-install='sv-dvorak-extended.install'
+install=sv-dvorak-extended.install
 source=('git+https://github.com/kyrias/sv-dvorak-extended.git'
-		'sv-dvorak-extended.install')
+				'sv-dvorak-extended.install')
 md5sums=('SKIP'
-		 'f6b9dc0d45e3742a865d39b8e20366b8')
+				 'f6b9dc0d45e3742a865d39b8e20366b8')
 
-package() {  
+package() {
 	install -Dm644 sv-dvorak-extended/sv-dvorak-extended "$pkgdir"/usr/share/X11/xkb/symbols/sv-dvorak-extended
 }
 
-# vim: set ts=4 sw=4 noet:
+# vim: set ts=2 sts=2 sw=2 noet:
