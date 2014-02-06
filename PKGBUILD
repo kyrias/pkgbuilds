@@ -16,21 +16,21 @@ conflicts=('quassel-core' 'quassel-client')
 install=quassel.install
 backup=(etc/conf.d/quassel)
 source=("http://quassel-irc.org/pub/quassel-$pkgver.tar.bz2"
-		'quassel.service'
-		'quassel.conf')
+				'quassel.service'
+				'quassel.conf')
 sha256sums=('f04d01602509c1d950602502e5f51aba47d99c73a9c70e77c563bb7749fc53c0'
-			'91a1aaae47d41c11aa418dd560039ddbbfb659e02b86379d8c4789c5ada362d3'
-			'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
+						'91a1aaae47d41c11aa418dd560039ddbbfb659e02b86379d8c4789c5ada362d3'
+						'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
 
 build() {
 	cd quassel-$pkgver
 	cmake	-DCMAKE_INSTALL_PREFIX=/usr/ \
-			-DWITH_KDE=OFF \
-			-DWITH_WEBKIT=OFF \
-			-DWITH_PHONON=OFF \
-			-DWITH_LIBINDICATE=OFF \
-			-DCMAKE_BUILD_TYPE="Release" \
-			-Wno-dev
+				-DWITH_KDE=OFF \
+				-DWITH_WEBKIT=OFF \
+				-DWITH_PHONON=OFF \
+				-DWITH_LIBINDICATE=OFF \
+				-DCMAKE_BUILD_TYPE="Release" \
+				-Wno-dev
 	make
 }
 
@@ -40,4 +40,4 @@ package() {
 	install -Dm644 quassel.conf "$pkgdir"/etc/conf.d/quassel
 }
 
-# vim: set ts=4 sw=4 noet:
+# vim: set ts=2 sts=2 sw=2 noet:
