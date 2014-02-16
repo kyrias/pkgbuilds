@@ -1,0 +1,8 @@
+post_install() {
+	echo "Please configure thinkfan in: /etc/thinkfan.conf"
+	echo "Have a look at the examples in: /usr/share/doc/thinkfan/examples for details."
+}
+
+post_upgrade() {
+	post_install
+}
