@@ -33,5 +33,3 @@ package() {
 	ln -s /opt/clean/man/man1/clm.1.gz "$pkgdir"/usr/share/man/man1
 	install -Dm644 CleanLicenseConditions.txt "$pkgdir"/usr/share/licenses/clean/LICENSE
 }
-
-# vim: set ts=2 sts=2 sw=2 noet:
