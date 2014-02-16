@@ -22,5 +22,3 @@ package() {
 	cd i3pystatus
 	python setup.py install --prefix=/usr --root="$pkgdir"
 }
-
-# vim: set ts=2 sts=2 sw=2 noet:
