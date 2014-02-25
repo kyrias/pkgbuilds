@@ -1,7 +1,7 @@
 # Maintainer: Bill Kolokithas <kolokithas.b@gmail.com>
 
 pkgname=j4-dmenu-desktop-git
-pkgver=150.0a7f56c
+pkgver=git
 pkgrel=1
 pkgdesc="A rewrite of i3-dmenu-desktop, which is much faster"
 arch=('i686' 'x86_64')
