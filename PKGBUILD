@@ -11,9 +11,8 @@ depends=('python' 'python-pafy')
 optdepends=('mpv: Alternative to mplayer for playback'
 			'mplayer: Alternative to mpv for playback')
 install=mps-youtube.install
-source=('https://github.com/np1/mps-youtube/archive/v0.01.32.tar.gz' 'mps-youtube.install')
-md5sums=('e2c7c2428d712fd8f447998d870cd9a7'
-         '60f96ac1aa29a2024d2213004636bee8')
+source=('https://github.com/np1/mps-youtube/archive/v0.01.32.tar.gz')
+md5sums=('e2c7c2428d712fd8f447998d870cd9a7')
 
 package() {
 	cd mps-youtube-$pkgver
