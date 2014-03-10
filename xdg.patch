@@ -1,0 +1,63 @@
+diff -r 1e935cab6f17 PATCHES
+--- a/PATCHES	Wed Oct 23 11:20:24 2013 -0700
++++ b/PATCHES	Wed Oct 23 17:45:06 2013 -0400
+@@ -0,0 +1,1 @@
++patch-1.5.21.mo.xdg.3
+diff -r 1e935cab6f17 globals.h
+--- a/globals.h	Wed Oct 23 11:20:24 2013 -0700
++++ b/globals.h	Thu Oct 24 23:46:58 2013 -0400
+@@ -40,6 +40,7 @@
+ WHERE char *AttachFormat;
+ WHERE char *Charset;
+ WHERE char *ComposeFormat;
++WHERE char *Confdir;
+ WHERE char *ConfigCharset;
+ WHERE char *ContentType;
+ WHERE char *DefaultHook;
+diff -r 1e935cab6f17 init.c
+--- a/init.c	Wed Oct 23 11:20:24 2013 -0700
++++ b/init.c	Thu Oct 24 23:46:58 2013 -0400
+@@ -2911,6 +2911,9 @@
+   snprintf (AttachmentMarker, sizeof (AttachmentMarker),
+ 	    "\033]9;%ld\a", (long) time (NULL));
+   
++  if ((p = getenv ("XDG_CONFIG_HOME")))
++    Confdir = safe_strdup (p);
++
+   /* on one of the systems I use, getcwd() does not return the same prefix
+      as is listed in the passwd file */
+   if ((p = getenv ("HOME")))
+@@ -3088,6 +3091,10 @@
+       snprintf (buffer, sizeof (buffer), "%s/.mutt/muttrc-%s", NONULL(Homedir), MUTT_VERSION);
+     if (access(buffer, F_OK) == -1)
+       snprintf (buffer, sizeof (buffer), "%s/.mutt/muttrc", NONULL(Homedir));
++    if (access(buffer, F_OK) == -1)
++      snprintf (buffer, sizeof (buffer), "%s/mutt/muttrc", NONULL(Confdir));
++    if (access(buffer, F_OK) == -1)
++      snprintf (buffer, sizeof (buffer), "%s/.config/mutt/muttrc", NONULL(Homedir));
+     if (access(buffer, F_OK) == -1) /* default to .muttrc for alias_file */
+       snprintf (buffer, sizeof(buffer), "%s/.muttrc", NONULL(Homedir));
+ 
+diff -r 1e935cab6f17 muttbug.sh.in
+--- a/muttbug.sh.in	Wed Oct 23 11:20:24 2013 -0700
++++ b/muttbug.sh.in	Thu Oct 24 23:46:58 2013 -0400
+@@ -268,7 +268,7 @@
+ fi
+ 
+ if test "$personal" = "yes" ; then
+-	CANDIDATES=".muttrc-${MUTTVERSION} .muttrc .mutt/muttrc-${MUTTVERSION} .mutt/muttrc"
++	CANDIDATES=".muttrc-${MUTTVERSION} .muttrc .mutt/muttrc-${MUTTVERSION} .mutt/muttrc .config/mutt/muttrc"
+ 	MATCHED="none"
+ 	for f in $CANDIDATES; do
+ 		if test -f "${HOME}/$f" ; then
+@@ -276,6 +276,9 @@
+ 			break
+ 	        fi
+ 	done
++	if test -n "${XDG_CONFIG_HOME}" && test -f "${XDG_CONFIG_HOME}/mutt/muttrc"; then
++		MATCHED="${XDG_CONFIG_HOME}/mutt/muttrc"
++	fi
+ 	
+ 	if test "$MATCHED" = "none" ; then
+ 		echo "Warning: Can't find your personal .muttrc." >&2
+
