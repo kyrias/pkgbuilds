@@ -4,7 +4,7 @@
 pkgname=mutt-kz-git
 pkgver=1.5.22.1.rc1.23.g51e74b7
 pkgrel=1
-pkgdesc='Small but powerful text-based mail client (experimental fork) (development version)'
+pkgdesc='Small but powerful text-based mail client'
 url='https://github.com/karelzak/mutt-kz'
 license=('GPL')
 source=('git://github.com/karelzak/mutt-kz.git' 'xdg.patch'
