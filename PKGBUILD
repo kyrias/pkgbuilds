@@ -2,12 +2,12 @@
 # Contributor: boyska <piuttosto@logorroici.org>
 
 pkgname=mutt-kz-git
-pkgver=1.5.22.1.rc1.23.g51e74b7
+pkgver=git
 pkgrel=1
 pkgdesc='Small but powerful text-based mail client'
 url='https://github.com/karelzak/mutt-kz'
 license=('GPL')
-source=('git://github.com/karelzak/mutt-kz.git' 'xdg.patch'
+source=('git+https://github.com/karelzak/mutt-kz.git' 'xdg.patch'
         'trash.patch::https://www.cs.oberlin.edu/~kuperman/help/code/patch-1.5.20.bk.trash_folder-purge_message.1.txt')
 sha1sums=('SKIP'
           '8cbae5a7ade3812cbdcb8a8dfabb29b042b7296a'
@@ -63,5 +63,3 @@ package() {
   # Provided by the mime-types package.
   rm "$pkgdir/etc/mime.types"
 }
-
-# vim: set ts=2 sw=2 et:
