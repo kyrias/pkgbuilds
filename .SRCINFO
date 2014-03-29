@@ -29,7 +29,7 @@ pkgbase = weechat-git
 	provides = weechat
 	conflicts = weechat
 	options = !libtool
-	source = git://git.savannah.nongnu.org/weechat.git
+	source = git+https://github.com/weechat/weechat.git
 	md5sums = SKIP
 
 pkgname = weechat-git

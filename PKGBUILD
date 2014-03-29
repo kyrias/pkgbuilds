@@ -18,7 +18,7 @@ optdepends=('perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 provides=('weechat')
 conflicts=('weechat')
 options=(!libtool)
-source=("git://git.savannah.nongnu.org/weechat.git")
+source=("git+https://github.com/weechat/weechat.git")
 md5sums=('SKIP')
 
 pkgver(){
