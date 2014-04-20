@@ -1,0 +1,10 @@
+[Unit]
+Description=DKIMproxy Incoming
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/dkimproxy.in --conf_file=/etc/dkimproxy/dkimproxy_in.conf --user=dkimproxy --group=dkimproxy --daemonize
+
+[Install]
+WantedBy=multi-user.target
