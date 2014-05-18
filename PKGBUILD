@@ -1,7 +1,7 @@
 # Maintainer: Johannes Löthberg <johannes@kyriasis.com>
 
 pkgname=mps-youtube
-pkgver=0.01.37
+pkgver=0.01.46
 pkgrel=1
 pkgdesc="Terminal based YouTube jukebox with playlist management"
 arch=('any')
@@ -12,7 +12,7 @@ optdepends=('mpv: Alternative to mplayer for playback'
 			'mplayer: Alternative to mpv for playback')
 install=mps-youtube.install
 source=("https://github.com/np1/mps-youtube/archive/v$pkgver.tar.gz")
-md5sums=('8946464242ba06583c50f662dc52c96e')
+sha256sums=('f2e1287ac5f54b576eb695cd6e8dd1ebb3f642943ca335ca545b6d4108d59397')
 
 package() {
 	cd mps-youtube-$pkgver
