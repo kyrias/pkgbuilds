@@ -24,8 +24,10 @@ pkgbase = gvim-hg
 	conflicts = vim-runtime
 	source = vim::hg+https://vim.googlecode.com/hg/
 	source = gvim.desktop
+	source = remove_ro_delay.patch
 	md5sums = SKIP
 	md5sums = 6e11c556ba3f2ce7dc05d9908188d604
+	md5sums = 0e2d8ef1e98a58614d441b24f2242b98
 
 pkgname = gvim-hg
 
