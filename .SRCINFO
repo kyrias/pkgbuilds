@@ -2,7 +2,7 @@
 # Mon Jun  1 15:02:16 UTC 2015
 pkgbase = elementary-xfce-icons-git
 	pkgdesc = Elementary icon-theme with improved Xfce support
-	pkgver = git
+	pkgver = 0.r941.cefa84e
 	pkgrel = 1
 	url = https://github.com/shimmerproject/elementary-xfce
 	install = elementary-xfce-icons-git.install
@@ -11,7 +11,7 @@ pkgbase = elementary-xfce-icons-git
 	makedepends = git
 	depends = gtk-update-icon-cache
 	conflicts = elementary-xfce-icons
-	source = elementary-xfce-icons-git::git+https://github.com/shimmerproject/elementary-xfce
+	source = elementary-xfce-icons::git+https://github.com/shimmerproject/elementary-xfce
 	md5sums = SKIP
 
 pkgname = elementary-xfce-icons-git
