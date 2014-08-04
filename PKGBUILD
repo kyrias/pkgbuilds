@@ -1,23 +1,24 @@
-# Maintainer: Adrian Sampson <adrian@radbox.org>
-# Contributor: Johannes Löthberg <johannes@kyriasis.com>
-
 pkgname=beets-git
-pkgver=git
+pkgver=1.3.6.r133.gc5f23cc
 pkgrel=1
+
 pkgdesc="Flexible music library manager and tagger - git version"
 arch=('any')
 url="http://beets.radbox.org/"
 license=('MIT')
+
 depends=('python2-munkres' 'mutagen'
-		 'python2-setuptools' 'python2-unidecode'
-		 'python2-musicbrainzngs' 'python2-yaml')
-makedepends=('git')
+         'python2-setuptools' 'python2-unidecode'
+         'python2-musicbrainzngs' 'python2-yaml')
 optdepends=('python2-pyacoustid: acoustic fingerprinting'
-			'python2-flask: web interface'
-			'gstreamer0.10-python: BPD audio player plugin'
-			'python2-pylast: lastgenre plugin')
+            'python2-flask: web interface'
+            'gstreamer0.10-python: BPD audio player plugin'
+            'python2-pylast: lastgenre plugin')
+makedepends=('git')
+
 provides=('beets')
 conflicts=('beets')
+
 source=('git+https://github.com/sampsyo/beets.git')
 md5sums=('SKIP')
 
