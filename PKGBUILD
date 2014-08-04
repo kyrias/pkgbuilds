@@ -1,5 +1,3 @@
-# Maintainer: Johannes Löthberg <johannes@kyriasis.com>
-
 pkgname=archmap
 pkgver=latest
 pkgrel=1
