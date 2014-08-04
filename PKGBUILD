@@ -1,15 +1,15 @@
-# Maintainer: Johannes Löthberg <johannes@kyriasis.com
-# Contributor: Carl Mueller  archlinux at carlm e4ward com
-
 pkgname=clean
 pkgver=2.4
 _ver=24
 pkgrel=3
+
 pkgdesc="A pure and lazy function programming language"
-arch=('x86_64' 'i686')
 url="http://wiki.clean.cs.ru.nl/Clean"
+arch=('x86_64' 'i686')
 license=('LGPL')
+
 install=clean.install
+
 md5sums=('7fb1ec59242df939bb3b6aea6e4650c6')
 if [[ "$CARCH" = "x86_64" ]]; then
 	_suffix=_64
