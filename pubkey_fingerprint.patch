@@ -1,0 +1,10 @@
+--- auth2-pubkey.c	2013-12-31 02:25:41.000000000 +0100
++++ auth2-pubkey.c	2014-08-06 03:08:06.841409407 +0200
+@@ -409,6 +409,7 @@
+ 			fp = key_fingerprint(found, SSH_FP_MD5, SSH_FP_HEX);
+ 			debug("matching key found: file %s, line %lu %s %s",
+ 			    file, linenum, key_type(found), fp);
++			do_pam_putenv("SSH_FINGERPRINT", fp);
+ 			free(fp);
+ 			break;
+ 		}

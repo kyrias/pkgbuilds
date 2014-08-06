@@ -1,0 +1,14 @@
+--- gss-serv-krb5.c.orig	2012-07-12 14:33:31.117551679 +0200
++++ gss-serv-krb5.c	2012-07-12 14:34:30.319020970 +0200
+@@ -104,6 +104,11 @@
+ 	} else
+ 		retval = 0;
+ 
++#ifdef USE_PAM
++        if (options.use_pam)
++             do_pam_putenv("GSS_AUTH_KRB5_PRINC", (char *)client->displayname.value);
++#endif
++
+ 	krb5_free_principal(krb_context, princ);
+ 	return retval;
+ }
