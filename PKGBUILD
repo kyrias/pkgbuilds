@@ -13,13 +13,12 @@ optdepends=('xorg-xauth: X11 forwarding'
 makedepends=('linux-headers')
 
 conflicts=('openssh')
-replaces=('openssh')
 
 backup=('etc/ssh/ssh_config' 'etc/ssh/sshd_config' 'etc/pam.d/sshd')
 
 install=install
 
-source=("ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${pkgname}-${pkgver}.tar.gz"{,.asc}
+source=("ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${pkgver}.tar.gz"{,.asc}
         'GSS_AUTH_KRB5_PRINC-env4openssh.diff'
         'pubkey_fingerprint.patch'
         'curve25519pad.patch'
@@ -39,14 +38,14 @@ sha1sums=('b850fd1af704942d9b3c2eff7ef6b3a59b6a6b6e' 'SKIP'
           'd93dca5ebda4610ff7647187f8928a3de28703f3')
 
 prepare() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd openssh-$pkgver
 	patch -p0 -i ../GSS_AUTH_KRB5_PRINC-env4openssh.diff
 	patch -p0 -i ../pubkey_fingerprint.patch
 	patch -p0 -i ../curve25519pad.patch
 }
 
 build() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd openssh-$pkgver
 
 	./configure \
 		--prefix=/usr \
@@ -68,7 +67,7 @@ build() {
 }
 
 check() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd openssh-$pkgver
 
 	make tests || true
 	# hard to suitably test connectivity:
@@ -77,7 +76,7 @@ check() {
 }
 
 package() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
+	cd openssh-$pkgver
 
 	make DESTDIR="${pkgdir}" install
 
