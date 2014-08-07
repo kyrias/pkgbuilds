@@ -1,5 +1,5 @@
 pkgname=goobook-git
-pkgver=1.2.r102.gd2859e7
+pkgver=1.6.r3.gb4ba7f8
 pkgrel=1
 
 pkgdesc="Search your google contacts from the command-line or mutt"
@@ -10,9 +10,7 @@ license=('GPL')
 conflicts=('goobook')
 provides=('goobook')
 
-depends=('python2' 'python2-gdata>=2.0.7' 'python2-setuptools'
-         'python2-simplejson' 'python2-hcs_utils>=1.3'
-         'python2-keyring' 'python2-six')
+depends=('python2' 'python2-gdata>=2.0.7' 'python2-simplejson')
 makedepends=('git' 'python2-setuptools')
 
 install=goobook.install
@@ -23,7 +21,7 @@ md5sums=('SKIP')
 
 pkgver() {
 	cd goobook
-	git describe --long | sed -E 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
+	git describe --tags --long | sed -E 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
 }
 
 package() {
