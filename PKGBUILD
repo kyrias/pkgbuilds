@@ -1,5 +1,5 @@
 pkgname=archmap
-pkgver=latest
+pkgver=0.3.r22.g14db501
 pkgrel=1
 
 pkgdesc="Generates a map of Arch Linux users"
