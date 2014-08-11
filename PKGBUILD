@@ -1,5 +1,5 @@
 pkgname=elementary-xfce-icons-git
-pkgver=0.r941.cefa84e
+pkgver=0.r948.b09ff75
 pkgrel=1
 
 pkgdesc='Elementary icon-theme with improved Xfce support'
@@ -14,21 +14,21 @@ conflicts=('elementary-xfce-icons')
 
 install=elementary-xfce-icons-git.install
 
-source=("elementary-xfce-icons::git+https://github.com/shimmerproject/elementary-xfce")
+source=('git+https://github.com/shimmerproject/elementary-xfce')
 md5sums=('SKIP')
 
 pkgver() {
-	cd elementary-xfce-icons
-	printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+	cd elementary-xfce
+	git describe | sed -E 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
 }
 
 package() {
-	mkdir -p "${pkgdir}/usr/share/icons"
+	mkdir -p "$pkgdir/usr/share/icons"
 
-	cd elementary-xfce-icons
-	find ./ -type d -name "elementary-xfce*" -execdir cp -r {} "${pkgdir}/usr/share/icons/" \;
+	cd elementary-xfce
+	find ./ -type d -name "elementary-xfce*" -execdir cp -r {} "$pkgdir"/usr/share/icons/ \;
 
-	cd "${pkgdir}/usr/share/icons"
+	cd "$pkgdir"/usr/share/icons
 	find ./ -type f \( \
 	                    -name "AUTHORS" \
 	                    -o -name "CONTRIBUTORS" \
