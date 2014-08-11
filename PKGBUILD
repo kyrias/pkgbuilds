@@ -1,5 +1,5 @@
 pkgname=vte3-select-text-git
-pkgver=0.36.2.r13.g2991e7a
+pkgver=0.36.3.r2.g4664d7c
 pkgrel=1
 
 pkgdesc="Virtual Terminal Emulator widget for use with GTK3"
