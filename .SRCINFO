@@ -2,7 +2,7 @@
 # Mon Jun  1 14:57:44 UTC 2015
 pkgbase = cower-git
 	pkgdesc = A simple AUR agent with a pretentious name
-	pkgver = 11.r22.g0c32b94
+	pkgver = 11.r29.gfa3b82d
 	pkgrel = 1
 	url = http://github.com/falconindy/cower
 	arch = i686
