@@ -17,6 +17,7 @@ conflicts=('weechat')
 options=(!libtool debug !makeflags strip)
 
 source=("git+https://github.com/weechat/weechat.git")
+
 md5sums=('SKIP')
 
 pkgver(){
