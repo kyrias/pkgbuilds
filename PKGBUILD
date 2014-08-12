@@ -10,11 +10,11 @@ license=('custom')
 depends=('libxslt')
 
 install=programmers-dvorak.install
-
 source=(http://www.kaufmann.no/downloads/linux/kbddvp-1_2_1-src-linux.tgz
         http://kaufmann.no/downloads/linux/dvp-1_2_1.map.gz
         LICENSE)
 noextract=(http://kaufmann.no/downloads/linux/dvp-1_2_1.map.gz)
+
 md5sums=('6d7797f1514be62cb01fbdf3a7e785a4'
          '8cde9c8f6b4de6c7c2ebb27589a5116e'
          '48ebb9016f6138334194103caba4483f')
