@@ -3,8 +3,8 @@ pkgver=1.3.6.r133.gc5f23cc
 pkgrel=1
 
 pkgdesc="Flexible music library manager and tagger - git version"
-arch=('any')
 url="http://beets.radbox.org/"
+arch=('any')
 license=('MIT')
 
 depends=('python2-munkres' 'mutagen'
@@ -20,6 +20,7 @@ provides=('beets')
 conflicts=('beets')
 
 source=('git+https://github.com/sampsyo/beets.git')
+
 md5sums=('SKIP')
 
 pkgver() {
