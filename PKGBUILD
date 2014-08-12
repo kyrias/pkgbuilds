@@ -24,25 +24,25 @@ md5sums=('SKIP'
          '8d4e4216cee58a1b0df223dde2216bf1')
 
 pkgver() {
-    cd termite
-    git describe | sed 's/^v//; s/-/.r/; s/-/./'
+	cd termite
+	git describe | sed 's/^v//; s/-/.r/; s/-/./'
 }
 
 prepare() {
-    cd termite
-    git submodule init
-    git config submodule.util.url "$srcdir"/util
-    git submodule update
-    patch -Np1 -i "$srcdir"/reverse_url_search.patch
+	cd termite
+	git submodule init
+	git config submodule.util.url "$srcdir"/util
+	git submodule update
+	patch -Np1 -i "$srcdir"/reverse_url_search.patch
 }
 
 build() {
-    cd termite
-    make
+	cd termite
+	make
 }
 
 package() {
-    cd termite
-    make PREFIX=/usr DESTDIR="$pkgdir" install
-    install -Dm644 config "$pkgdir"/etc/xdg/termite/config
+	cd termite
+	make PREFIX=/usr DESTDIR="$pkgdir" install
+	install -Dm644 config "$pkgdir"/etc/xdg/termite/config
 }
