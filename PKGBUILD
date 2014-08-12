@@ -17,10 +17,10 @@ conflicts=('smtp-server' 'smtp-forwarder')
 backup=('etc/smtpd/smtpd.conf' 'etc/smtpd/aliases')
 
 install=opensmtpd.install
-
 source=("http://www.opensmtpd.org/archives/$pkgname-$pkgver.tar.gz"
         'smtpd.service'
         'smtpd.socket')
+
 md5sums=('c76b39a5fcc0ad05eea541e74b16e62a'
         'a278f272d97a9fe5a8aac784a7c98d67'
         'c2c01e9ca78df3f65efe40a7c0e17ee0')
