@@ -16,6 +16,7 @@ provides=('mutt')
 
 source=('git+https://github.com/karelzak/mutt-kz.git' 'xdg.patch'
         'trash.patch::https://www.cs.oberlin.edu/~kuperman/help/code/patch-1.5.20.bk.trash_folder-purge_message.1.txt')
+
 sha1sums=('SKIP'
           '8cbae5a7ade3812cbdcb8a8dfabb29b042b7296a'
           'b63fe4e7ea2a113819558862be1387364ec24213')
