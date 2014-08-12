@@ -14,13 +14,14 @@ makedepends=('cmake' 'automoc4')
 provides=('quassel-core' 'quassel-client')
 conflicts=('quassel-core' 'quassel-client')
 
-install=quassel.install
 
 backup=(etc/conf.d/quassel)
 
+install=quassel.install
 source=("http://quassel-irc.org/pub/quassel-$pkgver.tar.bz2"
         'quassel.service'
         'quassel.conf')
+
 sha256sums=('68228ce23aa3a992add3d00cb1e8b4863d8ca64bea99c881edf6d16ff9ec7c23'
             '91a1aaae47d41c11aa418dd560039ddbbfb659e02b86379d8c4789c5ada362d3'
             'f3031ea8217e01ba42cea14606169e3e27affa5918968ffd5a03c21ae92fe2b8')
