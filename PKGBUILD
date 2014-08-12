@@ -17,7 +17,6 @@ conflicts=('openssh')
 backup=('etc/ssh/ssh_config' 'etc/ssh/sshd_config' 'etc/pam.d/sshd')
 
 install=install
-
 source=("ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${pkgver}.tar.gz"{,.asc}
         'GSS_AUTH_KRB5_PRINC-env4openssh.diff'
         'pubkey_fingerprint.patch'
@@ -27,6 +26,7 @@ source=("ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${pkgver}.ta
         'sshd.service'
         'sshd.socket'
         'sshd.pam')
+
 sha1sums=('b850fd1af704942d9b3c2eff7ef6b3a59b6a6b6e' 'SKIP'
           '34f85eeb736fab630926f1ac59e752556cae43ee'
           '83ba34572eb6c1ee250034a69a7eb9e9137d7068'
