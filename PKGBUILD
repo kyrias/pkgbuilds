@@ -9,6 +9,7 @@ arch=('x86_64' 'i686')
 license=('LGPL')
 
 install=clean.install
+source=("http://clean.cs.ru.nl/download/Clean${_ver}/linux/clean${pkgver}${_suffix}.tar.gz")
 
 md5sums=('7fb1ec59242df939bb3b6aea6e4650c6')
 if [[ "$CARCH" = "x86_64" ]]; then
@@ -17,7 +18,6 @@ if [[ "$CARCH" = "x86_64" ]]; then
 else
 	md5sums+=('c60ac576f0afb57a5f51091abde0107c')
 fi
-source=('clean.install' "http://clean.cs.ru.nl/download/Clean${_ver}/linux/clean${pkgver}${_suffix}.tar.gz")
 
 prepare() {
 	cd clean/bin
