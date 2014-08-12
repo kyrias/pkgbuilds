@@ -17,6 +17,7 @@ conflicts=('vte3' 'vte3-select-text')
 
 source=('expose_select_text.patch'
         'git://git.gnome.org/vte#branch=vte-0-36')
+
 sha256sums=('37fc0ecd4939c3b14f36dace31b54507e0f1cf1fc95a07ae079b1997d0481d7e'
             'SKIP')
 
