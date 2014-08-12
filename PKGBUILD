@@ -14,8 +14,8 @@ depends=('python2' 'python2-gdata>=2.0.7' 'python2-simplejson')
 makedepends=('git' 'python2-setuptools')
 
 install=goobook.install
-
 source=('goobook::git://gitorious.org/goobook/mainline.git')
+
 md5sums=('SKIP')
 
 
