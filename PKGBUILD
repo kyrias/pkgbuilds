@@ -13,8 +13,8 @@ makedepends=('git')
 conflicts=('elementary-xfce-icons')
 
 install=elementary-xfce-icons-git.install
-
 source=('git+https://github.com/shimmerproject/elementary-xfce')
+
 md5sums=('SKIP')
 
 pkgver() {
