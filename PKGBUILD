@@ -3,8 +3,8 @@ pkgver=0.3.r22.g14db501
 pkgrel=1
 
 pkgdesc="Generates a map of Arch Linux users"
-arch=('any')
 url="https://github.com/maelstrom59/ArchMap"
+arch=('any')
 license=('custom:UNLICENSE')
 
 depends=('python' 'python-geojson')
@@ -12,6 +12,7 @@ makedepends=('git')
 
 install=archmap.install
 source=('archmap::git+https://github.com/maelstrom59/ArchMap.git')
+
 md5sums=('SKIP')
 
 pkgver() {
