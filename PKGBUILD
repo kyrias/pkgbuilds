@@ -3,9 +3,9 @@ pkgver=0.r38704.f9d2ad6
 pkgrel=1
 
 pkgdesc='Video player based on MPlayer/mplayer2 (git version)'
+url='http://mpv.io'
 arch=('i686' 'x86_64')
 license=('GPL')
-url='http://mpv.io'
 
 depends=('portaudio' 'ffmpeg' 'lcms2' 'libdvdread' 'libcdio-paranoia' 'libxinerama'
          'libquvi' 'mpg123' 'libxv' 'libxkbcommon' 'libva' 'lirc-utils'
@@ -19,8 +19,8 @@ conflicts=('mpv')
 options=(!emptydirs)
 
 install=mpv.install
-
 source=('git+http://github.com/mpv-player/mpv#branch=master')
+
 md5sums=('SKIP')
 
 pkgver() {
