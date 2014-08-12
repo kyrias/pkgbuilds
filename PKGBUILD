@@ -7,13 +7,14 @@ url="https://github.com/MrElendig/kittypack"
 arch=('any')
 license=('AGPL3')
 
-backup=('etc/kittypack.conf')
-
 depends=('python' 'python-requests' 'python-docopt' 'python-yaml')
 makedepends=('git')
 
+backup=('etc/kittypack.conf')
+
 source=(git://github.com/MrElendig/kittypack.git)
-sha1sums=('SKIP')
+
+sha256sums=('SKIP')
 
 pkgver() {
 	cd kittypack

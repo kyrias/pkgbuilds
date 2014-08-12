@@ -14,7 +14,7 @@ pkgbase = kittypack-git
 	depends = python-yaml
 	backup = etc/kittypack.conf
 	source = git://github.com/MrElendig/kittypack.git
-	sha1sums = SKIP
+	sha256sums = SKIP
 
 pkgname = kittypack-git
 
