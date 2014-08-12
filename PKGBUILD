@@ -14,6 +14,7 @@ provides=('j4-dmenu-desktop')
 conflicts=('j4-dmenu-desktop')
 
 source=('git+https://github.com/enkore/j4-dmenu-desktop')
+
 md5sums=('SKIP')
 
 pkgver() {
