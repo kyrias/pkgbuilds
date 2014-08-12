@@ -10,6 +10,7 @@ license=('GPL3')
 depends=('python')
 
 source=("https://github.com/np1/pafy/archive/v$pkgver.tar.gz")
+
 sha256sums=('05e5c67d81b596baaf8c154bd5ea9a2b36f5b5048b251821809151ca16ade8d0')
 
 package() {
