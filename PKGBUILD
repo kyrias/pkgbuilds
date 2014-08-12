@@ -14,6 +14,7 @@ conflicts=('cower')
 provides=('cower')
 
 source=("git://github.com/falconindy/cower")
+
 md5sums=('SKIP')
 
 pkgver() {
