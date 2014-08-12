@@ -1,13 +1,16 @@
 pkgname=thinkfan
 pkgver=0.9.1
 pkgrel=1
+
 pkgdesc="A minimalist fan control program. Supports the sysfs hwmon interface and thinkpad_acpi"
+url='http://thinkfan.sourceforge.net/'
 arch=('i686' 'x86_64')
 license=('GPL')
-source=("http://downloads.sourceforge.net/project/$pkgname/$pkgname-$pkgver.tar.gz"
-		'thinkfan.install' 'thinkfan.service' 'thinkpad_acpi.conf')
-url='http://thinkfan.sourceforge.net/'
+
 install=thinkfan.install
+source=("http://downloads.sourceforge.net/project/$pkgname/$pkgname-$pkgver.tar.gz"
+        'thinkfan.install' 'thinkfan.service' 'thinkpad_acpi.conf')
+
 md5sums=('a981142f2c52ee4b0af69d5abbe03ced'
          '4d532f96317d54c48d9cd1139eac747f'
          '0197bde7c3d3b64d34635ead78cf3437'
