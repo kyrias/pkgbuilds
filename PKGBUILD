@@ -13,6 +13,7 @@ makedepends=('git')
 install=sv-dvorak-extended.install
 source=('git+https://github.com/kyrias/sv-dvorak-extended.git'
         'sv-dvorak-extended.install')
+
 md5sums=('SKIP'
          'f6b9dc0d45e3742a865d39b8e20366b8')
 
