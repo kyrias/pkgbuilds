@@ -10,6 +10,7 @@ license=('PSF')
 depends=('python2' 'python2-lockfile' 'python2-setuptools')
 
 source=("http://downloads.sourceforge.net/sourceforge/$pkgname/$pkgname-$pkgver.tar.gz")
+
 md5sums=('d06ed6d097911ddc8db31b4e9663df4b')
 
 package() {
