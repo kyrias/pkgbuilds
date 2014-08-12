@@ -11,6 +11,7 @@ depends=('python' 'basiciw-git' 'python-netifaces-git')
 makedepends=('git' 'python-distribute')
 
 source=('git+https://github.com/enkore/i3pystatus.git')
+
 md5sums=('SKIP')
 
 pkgver() {
