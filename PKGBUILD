@@ -12,8 +12,8 @@ optdepends=('mpv: Alternative to mplayer for playback'
             'mplayer: Alternative to mpv for playback')
 
 install=mps-youtube.install
-
 source=("https://github.com/np1/mps-youtube/archive/v$pkgver.tar.gz")
+
 sha256sums=('f2e1287ac5f54b576eb695cd6e8dd1ebb3f642943ca335ca545b6d4108d59397')
 
 package() {
