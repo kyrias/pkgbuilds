@@ -1,5 +1,5 @@
 pkgname=i3pystatus-git
-pkgver=3.29.r72.gf9bbeda
+pkgver=3.30.r12.gfed22c0
 pkgrel=1
 
 pkgdesc="i3status replacement written in python for the i3 window manager"
