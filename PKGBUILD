@@ -1,6 +1,6 @@
 pkgname=dbus-user-session
 pkgver=0.0.1
-pkgrel=4
+pkgrel=5
 
 pkgdesc="systemd user service for dbus user bus"
 url="https://theos.kyriasis.com/~kyrias"
