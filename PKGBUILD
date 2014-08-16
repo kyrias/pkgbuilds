@@ -1,6 +1,6 @@
 pkgname=dbus-user-session
 pkgver=0.0.1
-pkgrel=3
+pkgrel=4
 
 pkgdesc="systemd user service for dbus user bus"
 url="https://theos.kyriasis.com/~kyrias"
@@ -18,11 +18,11 @@ md5sums=('ae97fbcba9621d6f423193b2d67b7f52'
          'da3b313446e8f10915bb07cd36531c49')
 
 package() {
-	install -m 644 -D dbus.socket "$pkgdir"/etc/systemd/user/dbus.socket
-	install -m 644 -D dbus.service "$pkgdir"/etc/systemd/user/dbus.service
+	install -m 644 -D dbus.socket "$pkgdir"/usr/lib/systemd/user/dbus.socket
+	install -m 644 -D dbus.service "$pkgdir"/usr/lib/systemd/user/dbus.service
 
 	# Dropin for the user@.service that sets the correct DBUS_SESSION_BUS_ADDRESS
-	install -m 644 -D dbus.conf "$pkgdir"/etc/systemd/system/user@.service.d/dbus.conf
+	install -m 644 -D dbus.conf "$pkgdir"/usr/lib/systemd/system/user@.service.d/dbus.conf
 
 	install -D -m644 LICENSE "$pkgdir"/usr/share/licenses/dbus-user-session/LICENSE
 }

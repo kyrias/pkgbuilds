@@ -3,7 +3,7 @@
 pkgbase = dbus-user-session
 	pkgdesc = systemd user service for dbus user bus
 	pkgver = 0.0.1
-	pkgrel = 3
+	pkgrel = 4
 	url = https://theos.kyriasis.com/~kyrias
 	install = dbus-user-session.install
 	arch = any
