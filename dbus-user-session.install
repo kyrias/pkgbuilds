@@ -1,0 +1,8 @@
+post_install() {
+	# Enable dbus.socket for all users
+	systemctl --global enable dbus.socket
+}
+
+post_upgrade() {
+	post_install
+}
