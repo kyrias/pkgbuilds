@@ -1,6 +1,6 @@
 pkgname=dkimproxy
 pkgver=1.4.1
-pkgrel=4
+pkgrel=5
 
 pkgdesc="An SMTP-proxy that signs and/or verifies emails, using the Mail::DKIM module."
 url="http://dkimproxy.sourceforge.net/"
@@ -12,7 +12,7 @@ depends=('perl-mail-dkim' 'perl-net-server' 'perl-error')
 options=('!emptydirs')
 
 install=$pkgname.install
-source=("http://downloads.sourceforge.net/$pkgname/$pkgname-$pkgver.tar.gz"
+source=("http://downloads.sourceforge.net/dkimproxy/dkimproxy-$pkgver.tar.gz"
         'dkimproxy_in.service' 'dkimproxy_out.service')
 
 sha256sums=('e5345a1d3cefd32d1fb0face9fa73490118132767253b0ce643463f1e86185bd'
@@ -28,6 +28,6 @@ build() {
 package() {
 	cd dkimproxy-$pkgver
 	make install DESTDIR="$pkgdir"
-	install -Dm755 ../dkimproxy_in.service "$pkgdir/usr/lib/systemd/system/dkimproxy_in.service"
-	install -Dm755 ../dkimproxy_out.service "$pkgdir/usr/lib/systemd/system/dkimproxy_out.service"
+	install -Dm644 ../dkimproxy_in.service "$pkgdir/usr/lib/systemd/system/dkimproxy_in.service"
+	install -Dm644 ../dkimproxy_out.service "$pkgdir/usr/lib/systemd/system/dkimproxy_out.service"
 }

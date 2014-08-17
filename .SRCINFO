@@ -3,7 +3,7 @@
 pkgbase = dkimproxy
 	pkgdesc = An SMTP-proxy that signs and/or verifies emails, using the Mail::DKIM module.
 	pkgver = 1.4.1
-	pkgrel = 4
+	pkgrel = 5
 	url = http://dkimproxy.sourceforge.net/
 	install = dkimproxy.install
 	arch = i686
