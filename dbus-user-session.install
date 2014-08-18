@@ -3,10 +3,6 @@ post_install() {
 	systemctl --global enable dbus.socket
 }
 
-post_upgrade() {
-	systemctl --global reenable dbus.socket
-}
-
 pre_remove() {
 	systemctl --global disable dbus.socket
 }

@@ -1,6 +1,6 @@
 pkgname=dbus-user-session
 pkgver=0.0.1
-pkgrel=5
+pkgrel=6
 
 pkgdesc="systemd user service for dbus user bus"
 url="https://theos.kyriasis.com/~kyrias"
@@ -12,7 +12,7 @@ depends=('systemd')
 install=dbus-user-session.install
 source=('dbus.socket' 'dbus.service' 'dbus.conf' 'LICENSE')
 
-md5sums=('ae97fbcba9621d6f423193b2d67b7f52'
+md5sums=('91678d233ba41ae88718a5522fb69f8c'
          'c3693a827f1d9559ecd692f19d465d01'
          '43535857bf82111dd9f8b9a0413a6e20'
          'da3b313446e8f10915bb07cd36531c49')
