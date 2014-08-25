@@ -17,7 +17,7 @@ conflicts=('smtp-server' 'smtp-forwarder')
 backup=('etc/smtpd/smtpd.conf' 'etc/smtpd/aliases')
 
 install=opensmtpd.install
-source=("http://www.opensmtpd.org/archives/$pkgname-$pkgver.tar.gz"
+source=("http://www.opensmtpd.org/archives/opensmtpd-$pkgver.tar.gz"
         'smtpd.service'
         'smtpd.socket')
 
@@ -26,11 +26,11 @@ md5sums=('c76b39a5fcc0ad05eea541e74b16e62a'
         'c2c01e9ca78df3f65efe40a7c0e17ee0')
 
 prepare() {
-	sed -ri 's,/etc/mail,/etc/smtpd,g' "$pkgname-$pkgver/smtpd/smtpd.conf"
+	sed -ri 's,/etc/mail,/etc/smtpd,g' "opensmtpd-$pkgver/smtpd/smtpd.conf"
 }
 
 build() {
-	cd "$pkgname-$pkgver"
+	cd opensmtpd-$pkgver
 
 	# Remove _FORTIFY_SOURCES: FS#38124
 	export CPPFLAGS=''
@@ -52,7 +52,7 @@ build() {
 }
 
 package() {
-	cd "$pkgname-$pkgver"
+	cd opensmtpd-$pkgver
 
 	make DESTDIR="$pkgdir" install
 
