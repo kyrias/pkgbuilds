@@ -1,5 +1,5 @@
 pkgname=weechat-git
-pkgver=1.0.r22.g25747a5
+pkgver=1.0.r67.g6a118ce
 pkgrel=1
 
 pkgdesc="Fast, light & extensible IRC client (curses UI)"
@@ -14,7 +14,7 @@ makedepends=('git' 'cmake' 'pkgconfig' 'perl' 'python2' 'lua' 'tcl' 'ruby' 'aspe
 provides=('weechat')
 conflicts=('weechat')
 
-options=(!libtool debug !makeflags strip)
+options=(!makeflags)
 
 source=("git+https://github.com/weechat/weechat.git")
 
