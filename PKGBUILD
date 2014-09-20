@@ -1,5 +1,5 @@
 pkgname=mpv-git
-pkgver=0.r38757.d811f6a
+pkgver=0.r39034.c86b479
 pkgrel=1
 
 pkgdesc='Video player based on MPlayer/mplayer2 (git version)'
@@ -19,7 +19,7 @@ conflicts=('mpv')
 options=(!emptydirs)
 
 install=mpv.install
-source=('git+http://github.com/mpv-player/mpv#branch=master')
+source=('git+http://github.com/mpv-player/mpv')
 
 md5sums=('SKIP')
 
@@ -37,8 +37,6 @@ build() {
 	    --confdir=/etc/mpv \
 	    \
 	    --disable-cocoa \
-	    --disable-coreaudio \
-	    --disable-corevideo \
 	    --disable-direct3d \
 	    --disable-dsound \
 	    --disable-gl-win32 \
