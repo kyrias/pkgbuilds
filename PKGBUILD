@@ -1,5 +1,5 @@
 pkgname=beets-git
-pkgver=1.3.6.r133.gc5f23cc
+pkgver=1.3.6.r133.lj2323
 pkgrel=1
 
 pkgdesc="Flexible music library manager and tagger - git version"
