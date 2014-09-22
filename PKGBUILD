@@ -1,5 +1,5 @@
 pkgname=weechat-git
-pkgver=1.0.r67.g6a118ce
+pkgver=1.0.r77.gf91f57f
 pkgrel=1
 
 pkgdesc="Fast, light & extensible IRC client (curses UI)"
@@ -7,7 +7,7 @@ url="http://www.weechat.org/"
 arch=('i686' 'x86_64')
 license=('GPL3')
 
-depends=('gnutls' 'ncurses' 'libgcrypt')
+depends=('gnutls' 'ncurses-git' 'libgcrypt')
 optdepends=('perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 makedepends=('git' 'cmake' 'pkgconfig' 'perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 
