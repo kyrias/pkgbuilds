@@ -1,5 +1,5 @@
 pkgname=python-pafy
-pkgver=0.3.58
+pkgver=0.3.62
 pkgrel=1
 
 pkgdesc="Python API for YouTube - Download videos and retrieve metadata."
@@ -11,7 +11,7 @@ depends=('python')
 
 source=("https://github.com/np1/pafy/archive/v$pkgver.tar.gz")
 
-sha256sums=('05e5c67d81b596baaf8c154bd5ea9a2b36f5b5048b251821809151ca16ade8d0')
+sha256sums=('48eba571074dbe79814a5028b8ad0a2403ead5d226969cf8666585079e910fb4')
 
 package() {
 	cd pafy-$pkgver
