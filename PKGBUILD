@@ -21,34 +21,30 @@ pkgver() {
 	git describe --tags | sed 's/^v//; s/-/.r/; s/-/./'
 }
 
-prepare() {
-	mkdir ncurses-build
-	mkdir ncursesw-build
-}
-
 build() {
-	cd ncursesw-build
+	mkdir ncurses{,w}-build
 
+	cd ncursesw-build
 	# add --enable-ext-colors and --enable-ext-mouse with next soname bump
-	../ncurses/configure --prefix=/usr \
+	../ncurses/configure \
+	    --prefix=/usr \
 	    --with-shared \
 	    --with-normal \
 	    --without-ada  \
 	    --enable-widec \
 	    --without-debug \
 	    --enable-pc-files
-
 	make
 
 	# libraries for external binary support
 	cd "$srcdir"/ncurses-build
-
+	[[ $CARCH = "x86_64" ]] && CONFIGFLAG="--with-chtype=long"
 	../ncurses/configure --prefix=/usr \
 	    --with-shared \
 	    --with-normal \
 	    --without-ada \
 	    --without-debug \
-	    --with-chtype=logn
+	    $CONFIGFLAG
 	make
 }
 
@@ -76,6 +72,5 @@ package() {
 		ln -s lib"$lib".so.5.9 "$pkgdir"/usr/lib/lib"$lib".so.5
 	done
 
-	cd "$srcdir"/ncurses
-	install -Dm755 COPYING "$pkgdir"/usr/share/licenses/ncurses/COPYING
+	install -Dm755 "$srcdir"/ncurses/COPYING "$pkgdir"/usr/share/licenses/ncurses/COPYING
 }
