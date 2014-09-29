@@ -16,7 +16,7 @@ pkgbase = termite-git
 	depends = gcc-libs
 	depends = gtk3
 	depends = pango
-	depends = vte3-select-text-git
+	depends = vte3-select-text-git>=0.38.0
 	provides = termite
 	conflicts = termite
 	backup = etc/xdg/termite/config

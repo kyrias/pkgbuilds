@@ -7,7 +7,7 @@ url="https://github.com/thestinger/termite/"
 arch=('i686' 'x86_64')
 license=('GPL')
 
-depends=('atk' 'cairo' 'glibc' 'glib2' 'gcc-libs' 'gtk3' 'pango' 'vte3-select-text-git')
+depends=('atk' 'cairo' 'glibc' 'glib2' 'gcc-libs' 'gtk3' 'pango' 'vte3-select-text-git>=0.38.0')
 makedepends=('git')
 
 provides=('termite')
