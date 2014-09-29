@@ -1,5 +1,5 @@
 pkgname=vte3-select-text-git
-pkgver=0.36.3.r2.g4664d7c
+pkgver=0.38.0.r11.g54aded6
 pkgrel=1
 
 pkgdesc="Virtual Terminal Emulator widget for use with GTK3"
@@ -10,15 +10,15 @@ license=('LGPL')
 options=('!libtool' '!emptydirs')
 
 depends=('gtk3' 'vte-common')
-makedepends=('intltool' 'gobject-introspection' 'gtk3' 'gtk-doc' 'gperf' 'git')
+makedepends=('intltool' 'gobject-introspection' 'gtk3' 'python2' 'vala' 'git')
 
 provides=('vte3')
 conflicts=('vte3' 'vte3-select-text')
 
 source=('expose_select_text.patch'
-        'git://git.gnome.org/vte#branch=vte-0-36')
+        'git://git.gnome.org/vte#branch=vte-0-38')
 
-sha256sums=('37fc0ecd4939c3b14f36dace31b54507e0f1cf1fc95a07ae079b1997d0481d7e'
+sha256sums=('f9c28813843314210b53037373c657c6b2389e3e5b5607226b7acaa3a7964a7f'
             'SKIP')
 
 pkgver() {
@@ -38,15 +38,15 @@ build() {
 	./configure \
 	    --prefix=/usr \
 	    --sysconfdir=/etc \
-	    --enable-introspection \
 	    --libexecdir=/usr/lib/vte \
-	    --localstatedir=/var --disable-static
+	    --localstatedir=/var \
+	    --disable-static \
+	    --enable-introspection
+
 	make
 }
 
 package() {
 	cd vte
-
 	make DESTDIR="$pkgdir" install
-	rm "$pkgdir"/usr/lib/vte/gnome-pty-helper
 }

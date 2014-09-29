@@ -2,7 +2,7 @@
 # Mon Jun  1 14:56:21 UTC 2015
 pkgbase = vte3-select-text-git
 	pkgdesc = Virtual Terminal Emulator widget for use with GTK3
-	pkgver = 0.36.3.r2.g4664d7c
+	pkgver = 0.38.0.r11.g54aded6
 	pkgrel = 1
 	url = http://www.gnome.org
 	arch = i686
@@ -11,8 +11,8 @@ pkgbase = vte3-select-text-git
 	makedepends = intltool
 	makedepends = gobject-introspection
 	makedepends = gtk3
-	makedepends = gtk-doc
-	makedepends = gperf
+	makedepends = python2
+	makedepends = vala
 	makedepends = git
 	depends = gtk3
 	depends = vte-common
@@ -22,8 +22,8 @@ pkgbase = vte3-select-text-git
 	options = !libtool
 	options = !emptydirs
 	source = expose_select_text.patch
-	source = git://git.gnome.org/vte#branch=vte-0-36
-	sha256sums = 37fc0ecd4939c3b14f36dace31b54507e0f1cf1fc95a07ae079b1997d0481d7e
+	source = git://git.gnome.org/vte#branch=vte-0-38
+	sha256sums = f9c28813843314210b53037373c657c6b2389e3e5b5607226b7acaa3a7964a7f
 	sha256sums = SKIP
 
 pkgname = vte3-select-text-git
