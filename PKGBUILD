@@ -28,6 +28,7 @@ pkgver(){
 build() {
 	cd weechat
 	cmake -DPREFIX=/usr \
+	      -DENABLE_PYTHON3=ON \
 	      -DPYTHON_EXECUTABLE=/usr/bin/python \
 	      -DPYTHON_LIBRARY=/usr/lib/libpython3.so\
 	      -DENABLE_MAN=ON \
