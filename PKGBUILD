@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 license=('GPL3')
 
 depends=('gnutls' 'ncurses-git' 'libgcrypt')
-optdepends=('perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
+optdepends=('perl' 'python' 'lua' 'tcl' 'ruby' 'aspell')
 makedepends=('git' 'cmake' 'pkgconfig' 'perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 
 provides=('weechat')
