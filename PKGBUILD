@@ -28,8 +28,8 @@ pkgver(){
 build() {
 	cd weechat
 	cmake -DPREFIX=/usr \
-	      -DPYTHON_EXECUTABLE=/usr/bin/python2 \
-	      -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so\
+	      -DPYTHON_EXECUTABLE=/usr/bin/python \
+	      -DPYTHON_LIBRARY=/usr/lib/libpython3.so\
 	      -DENABLE_MAN=ON \
 	      -DENABLE_DOC=OFF \
 	      -DWEECHAT_HOME=~/.config/weechat
