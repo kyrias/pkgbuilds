@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 license=('GPL3')
 
 depends=('gnutls' 'ncurses-git' 'libgcrypt')
-optdepends=('perl' 'python' 'lua' 'tcl' 'ruby' 'aspell')
+optdepends=('perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 makedepends=('git' 'cmake' 'pkgconfig' 'perl' 'python2' 'lua' 'tcl' 'ruby' 'aspell')
 
 provides=('weechat')
@@ -28,9 +28,8 @@ pkgver(){
 build() {
 	cd weechat
 	cmake -DPREFIX=/usr \
-	      -DENABLE_PYTHON3=ON \
-	      -DPYTHON_EXECUTABLE=/usr/bin/python \
-	      -DPYTHON_LIBRARY=/usr/lib/libpython3.so\
+	      -DPYTHON_EXECUTABLE=/usr/bin/python2 \
+	      -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so\
 	      -DENABLE_MAN=ON \
 	      -DENABLE_DOC=OFF \
 	      -DWEECHAT_HOME=~/.config/weechat
