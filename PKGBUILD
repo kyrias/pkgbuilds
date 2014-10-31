@@ -1,5 +1,5 @@
 pkgname=mpv-git
-pkgver=0.r39034.c86b479
+pkgver=0.r39473.8c3baff
 pkgrel=1
 
 pkgdesc='Video player based on MPlayer/mplayer2 (git version)'
