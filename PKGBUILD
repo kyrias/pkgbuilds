@@ -1,5 +1,5 @@
 pkgname=openssh-princ-fp
-pkgver=6.6p1
+pkgver=6.7p1
 pkgrel=1
 
 pkgdesc='Free version of the SSH connectivity tools'
@@ -13,6 +13,7 @@ optdepends=('xorg-xauth: X11 forwarding'
 makedepends=('linux-headers')
 
 conflicts=('openssh')
+provides=('openssh')
 
 backup=('etc/ssh/ssh_config' 'etc/ssh/sshd_config' 'etc/pam.d/sshd')
 
@@ -20,17 +21,16 @@ install=install
 source=("ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-${pkgver}.tar.gz"{,.asc}
         'GSS_AUTH_KRB5_PRINC-env4openssh.diff'
         'pubkey_fingerprint.patch'
-        'curve25519pad.patch'
         'sshdgenkeys.service'
         'sshd@.service'
         'sshd.service'
         'sshd.socket'
         'sshd.pam')
 
-sha1sums=('b850fd1af704942d9b3c2eff7ef6b3a59b6a6b6e' 'SKIP'
+sha1sums=('14e5fbed710ade334d65925e080d1aaeb9c85bf6'
+          'SKIP'
           '34f85eeb736fab630926f1ac59e752556cae43ee'
           '83ba34572eb6c1ee250034a69a7eb9e9137d7068'
-          '13b74b57b3d9b9a256eeb44b4fca29a8f27aa7ad'
           'cc1ceec606c98c7407e7ac21ade23aed81e31405'
           '6a0ff3305692cf83aca96e10f3bb51e1c26fccda'
           'ec49c6beba923e201505f5669cea48cad29014db'
@@ -41,7 +41,6 @@ prepare() {
 	cd openssh-$pkgver
 	patch -p0 -i ../GSS_AUTH_KRB5_PRINC-env4openssh.diff
 	patch -p0 -i ../pubkey_fingerprint.patch
-	patch -p0 -i ../curve25519pad.patch
 }
 
 build() {
