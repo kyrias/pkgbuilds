@@ -15,6 +15,7 @@ pkgbase = mutt-kz-git
 	depends = gpgme
 	depends = openssl>=0.9.8e
 	depends = libsasl
+	depends = libidn
 	depends = mime-types
 	depends = ncurses
 	depends = notmuch
