@@ -49,4 +49,5 @@ build() {
 package() {
 	cd vte
 	make DESTDIR="$pkgdir" install
+	rm "$pkgdir"/etc/profile.d/vte.sh
 }
