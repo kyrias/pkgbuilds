@@ -1,5 +1,5 @@
 pkgname=cower-git
-pkgver=11.r34.g8789499
+pkgver=11.r35.g8370f90
 pkgrel=1
 
 pkgdesc="A simple AUR agent with a pretentious name"
