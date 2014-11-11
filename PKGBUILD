@@ -1,5 +1,5 @@
 pkgname=dunst-git
-pkgver=1.0.0.616.9117df5
+pkgver=1.0.0.r92.g9117df5
 pkgrel=1
 
 pkgdesc="Customizable and lightweight notification-daemon"
@@ -7,7 +7,7 @@ url="http://www.knopwob.org/dunst"
 arch=('i686' 'x86_64')
 license=('BSD')
 
-depends=('libxinerama' 'libxss' 'pango' 'libnotify')
+depends=('libxinerama' 'libxss' 'pango' 'libnotify' 'libxdg-basedir')
 makedepends=('git' 'perl')
 
 provides=('dunst' 'notification-daemon')
