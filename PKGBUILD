@@ -26,6 +26,6 @@ build() {
 }
 
 package() {
-  cd yawa
-  make DESTDIR="$pkgdir" install
+	cd yawa
+	make DESTDIR="$pkgdir" install
 }
