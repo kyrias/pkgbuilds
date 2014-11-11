@@ -2,7 +2,7 @@
 # Mon Jun  1 14:56:39 UTC 2015
 pkgbase = termite-git
 	pkgdesc = A simple VTE-based terminal
-	pkgver = 8.r8.gcc34465
+	pkgver = 9.r3.gcb3dfb7
 	pkgrel = 1
 	url = https://github.com/thestinger/termite/
 	arch = i686
