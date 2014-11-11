@@ -1,5 +1,5 @@
 pkgname=mutt-kz-git
-pkgver=1.5.22.1.rc1.r45.gf0f961f
+pkgver=1.5.23.1.rc1.r1.gfbca882
 pkgrel=1
 
 pkgdesc='Small but powerful text-based mail client'

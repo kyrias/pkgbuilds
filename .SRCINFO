@@ -2,7 +2,7 @@
 # Mon Jun  1 15:02:31 UTC 2015
 pkgbase = mutt-kz-git
 	pkgdesc = Small but powerful text-based mail client
-	pkgver = 1.5.22.1.rc1.r45.gf0f961f
+	pkgver = 1.5.23.1.rc1.r1.gfbca882
 	pkgrel = 1
 	url = https://github.com/karelzak/mutt-kz
 	arch = i686
