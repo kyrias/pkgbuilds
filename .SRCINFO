@@ -2,7 +2,7 @@
 # Mon Jun  1 14:54:46 UTC 2015
 pkgbase = yawa-git
 	pkgdesc = A tool which allows you to compose wallpapers for X.
-	pkgver = 0.9.0.r2.g7caa0c2
+	pkgver = 0.9.0.r12.ga85b594
 	pkgrel = 1
 	url = http://git.kyriasis.com/kyrias/yawa/about/
 	arch = i686

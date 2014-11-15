@@ -1,5 +1,5 @@
 pkgname=yawa-git
-pkgver=0.9.0.r2.g7caa0c2
+pkgver=0.9.0.r12.ga85b594
 pkgrel=1
 
 pkgdesc='A tool which allows you to compose wallpapers for X.'
@@ -20,12 +20,14 @@ pkgver() {
 }
 
 build() {
-	cd yawa
-	cmake -g 'Unix Makefiles' . -DCMAKE_INSTALL_PREFIX=/usr
+	mkdir build
+	cd build
+
+	cmake -g 'Unix Makefiles' "$srcdir"/yawa -DCMAKE_INSTALL_PREFIX=/usr
 	make
 }
 
 package() {
-	cd yawa
+	cd build
 	make DESTDIR="$pkgdir" install
 }
