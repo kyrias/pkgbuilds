@@ -1,5 +1,5 @@
 pkgname=dunst-git
-pkgver=1.0.0.r92.g9117df5
+pkgver=1.1.0.r11.g9117df5
 pkgrel=1
 
 pkgdesc="Customizable and lightweight notification-daemon"
@@ -19,7 +19,7 @@ sha256sums=('SKIP')
 
 pkgver() {
 	cd dunst
-	git describe | sed -r 's/^v//; s/([^-]*-g)/r\1/; s/znc-//; s/-/./g'
+	git describe --tags | sed -r 's/^v//; s/([^-]*-g)/r\1/; s/znc-//; s/-/./g'
 }
 
 build() {
