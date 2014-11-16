@@ -5,7 +5,6 @@ pkgbase = pacman-git
 	pkgver = 4.1.2.r475.gbd744d0
 	pkgrel = 1
 	url = http://www.archlinux.org/pacman/
-	arch = i686
 	arch = x86_64
 	license = GPL
 	checkdepends = python2
@@ -23,12 +22,16 @@ pkgbase = pacman-git
 	provides = libalpm.so
 	conflicts = pacman
 	conflicts = pacman-contrib
-	options = !libtool
-	options = !strip
+	options = strip
+	options = debug
 	backup = etc/pacman.conf
 	backup = etc/makepkg.conf
 	source = git://projects.archlinux.org/pacman.git
+	source = pacman.conf
+	source = makepkg.conf
 	sha1sums = SKIP
+	sha1sums = 3c1bddf27602e02fb57801c0ea7313b3869acc92
+	sha1sums = f2ef3115adaf2aa5c13a1ab7e948c21028451465
 
 pkgname = pacman-git
 
