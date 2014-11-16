@@ -1,14 +1,16 @@
-pkgname=termite-git
+pkgbase=termite-git
+pkgname=('termite-git' 'termite-terminfo-git')
 pkgver=9.r3.gcb3dfb7
 pkgrel=1
 
-pkgdesc="A simple VTE-based terminal"
+pkgdesc="A simple VTE-based terminal emulator"
 url="https://github.com/thestinger/termite/"
 arch=('i686' 'x86_64')
 license=('GPL')
 
-depends=('atk' 'cairo' 'glibc' 'glib2' 'gcc-libs' 'gtk3' 'pango' 'vte3-select-text-git>=0.38.0')
-makedepends=('git')
+depends=('atk' 'cairo' 'glibc' 'glib2' 'gcc-libs'
+         'gtk3' 'pango' 'vte3-select-text-git>=0.38.0')
+makedepends=('git' 'ncurses')
 
 provides=('termite')
 conflicts=('termite')
@@ -41,8 +43,16 @@ build() {
 	make
 }
 
-package() {
+package_termite-git() {
 	cd termite
 	make PREFIX=/usr DESTDIR="$pkgdir" install
 	install -Dm644 config "$pkgdir"/etc/xdg/termite/config
+}
+
+package_termite-terminfo-git() {
+	pkgdesc="terminfo for termite-git, a simple VTE-based terminal emulator"
+	depends=()
+
+	install -d "$pkgdir"/usr/share/terminfo
+	tic -x "$srcdir"/termite/termite.terminfo -o "$pkgdir"/usr/share/terminfo
 }
