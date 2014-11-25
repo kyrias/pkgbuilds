@@ -3,11 +3,12 @@
 pkgbase = python-pafy
 	pkgdesc = Python API for YouTube
 	pkgver = 0.3.66
-	pkgrel = 1
+	pkgrel = 2
 	url = http://np1.github.io/pafy
 	arch = any
 	license = GPL3
 	depends = python
+	optdepends = ffmpeg: fix issues with audio file downloads
 	source = https://github.com/np1/pafy/archive/v0.3.66.tar.gz
 	sha1sums = bdd097229443a4cec1226d5a428ac859e528be0d
 
