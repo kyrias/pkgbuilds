@@ -1,5 +1,5 @@
 pkgname=mpv-git
-pkgver=0.r39571.5fd8a1e
+pkgver=0.r39514.bebfaae
 pkgrel=1
 
 pkgdesc='Video player based on MPlayer/mplayer2 (git version)'
@@ -7,10 +7,11 @@ url='http://mpv.io'
 arch=('i686' 'x86_64')
 license=('GPL')
 
-depends=('portaudio' 'ffmpeg' 'lcms2' 'libdvdread' 'libcdio-paranoia' 'libxinerama'
-         'libquvi' 'mpg123' 'libxv' 'libxkbcommon' 'libva' 'lirc-utils'
+depends=('portaudio' 'ffmpeg' 'lcms2' 'libdvdread' 'libcdio-paranoia'
+         'libxinerama' 'mpg123' 'libxv' 'libxkbcommon' 'libva' 'lirc-utils'
          'desktop-file-utils' 'hicolor-icon-theme' 'xdg-utils' 'lua51'
          'libxss' 'sdl2' 'smbclient' 'libguess' 'libdvdnav')
+optdepends=('youtube-dl: for video-sharing website support')
 makedepends=('mesa' 'python-docutils'  'git')
 
 provides=('mpv')
