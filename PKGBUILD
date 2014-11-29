@@ -1,14 +1,13 @@
 pkgname=mps-youtube
 pkgver=0.2.1
-pkgrel=1
+pkgrel=2
 
 pkgdesc="Terminal based YouTube jukebox with playlist management"
 url='https://github.com/np1/mps-youtube'
 arch=('any')
 license=('GPL3')
 
-depends=('python' 'python-pafy')
-makedepends=('python-setuptools')
+depends=('python' 'python-setuptools' 'python-pafy')
 optdepends=('mpv: Alternative to mplayer for playback'
             'mplayer: Alternative to mpv for playback'
             'ffmpeg: for transcoding downloaded content'
