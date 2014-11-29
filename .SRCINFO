@@ -2,8 +2,8 @@
 # Mon Jun  1 15:00:40 UTC 2015
 pkgbase = mps-youtube
 	pkgdesc = Terminal based YouTube jukebox with playlist management
-	pkgver = 0.2.0
-	pkgrel = 2
+	pkgver = 0.2.1
+	pkgrel = 1
 	url = https://github.com/np1/mps-youtube
 	install = mps-youtube.install
 	arch = any
@@ -15,8 +15,8 @@ pkgbase = mps-youtube
 	optdepends = mplayer: Alternative to mpv for playback
 	optdepends = ffmpeg: for transcoding downloaded content
 	optdepends = xclip: for copying content to the clipboard
-	source = https://github.com/np1/mps-youtube/archive/v0.2.0.tar.gz
-	sha256sums = 96d83868dc19a916119772ca00378b2a500a70eaedf9f217c508c673cd1e3f17
+	source = https://github.com/np1/mps-youtube/archive/v0.2.1.tar.gz
+	sha256sums = 858db8a0c075bcb7f3bab22fbace7e0ce4d1eba142a2d26e8d71ae3503d23249
 
 pkgname = mps-youtube
 
