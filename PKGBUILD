@@ -1,6 +1,6 @@
 pkgname=qutebrowser-git
-pkgver=r3206.3622f35
-pkgrel=4
+pkgver=0.1.r37.g410d78c
+pkgrel=1
 
 pkgdesc="A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit"
 url="http://www.qutebrowser.org/"
@@ -32,8 +32,8 @@ sha256sums=('SKIP'
 install=qutebrowser-git.install
 
 pkgver() {
-	cd "$srcdir/qutebrowser"
-	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+	cd qutebrowser
+	git describe --always | sed -r 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
 }
 
 build() {
