@@ -1,5 +1,5 @@
 pkgname=pacman-git
-pkgver=4.1.2.r475.gbd744d0
+pkgver=4.2.0.r0.g565c931
 pkgrel=1
 
 pkgdesc="A library-based package manager with dependency support. git version."
@@ -30,7 +30,7 @@ sha1sums=('SKIP'
 
 pkgver() {
 	cd pacman
-	git describe | sed -r 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
+	git describe --long | sed -r 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
 }
 
 build() {
