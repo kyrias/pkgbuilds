@@ -1,6 +1,6 @@
 pkgname=tmux-256color-it
 pkgver=0.0.1
-pkgrel=3
+pkgrel=4
 
 pkgdesc='Terminfo files for tmux that support italics'
 url='https://theos.kyriasis.com/~kyrias'
