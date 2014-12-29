@@ -1,5 +1,5 @@
 pkgname=ncurses-git
-pkgver=5.9.r175.ga84fd46
+pkgver=5.9.r182.g1cfa111
 pkgrel=1
 
 pkgdesc='Unofficial git mirror of snapshots from ftp://invisible-island.net/ncurses/current/'
@@ -58,7 +58,7 @@ package() {
 	done
 
 	for lib in ncurses ncurses++ form panel menu; do
-		ln -s "$lib"w.pc "$pkgdir"/usr/lib/pkgconfig/"$lib".pc
+		ln -s "$lib"w.pc "$pkgdir"/usr/share/pkgconfig/"$lib".pc
 	done
 
 	# some packages look for -lcurses during build
