@@ -2,7 +2,7 @@
 # Mon Jun  1 14:56:11 UTC 2015
 pkgbase = weechat-git
 	pkgdesc = Fast, light & extensible IRC client (curses UI)
-	pkgver = 1.0.r242.ge253a25
+	pkgver = 1.1rc1.r12.gce98526
 	pkgrel = 1
 	url = http://www.weechat.org/
 	arch = i686
