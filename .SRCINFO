@@ -11,6 +11,8 @@ pkgbase = irker-git
 	makedepends = docbook-xml
 	makedepends = docbook-xsl
 	depends = python2
+	provides = irker
+	conflicts = irker
 	source = git+https://gitorious.org/irker/irker.git
 	sha1sums = SKIP
 

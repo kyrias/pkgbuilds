@@ -7,6 +7,9 @@ url="http://www.catb.org/esr/irker/"
 arch=('any')
 license=('BSD')
 
+conflicts=('irker')
+provides=('irker')
+
 depends=('python2')
 makedepends=('xmlto' 'docbook-xml' 'docbook-xsl')
 
