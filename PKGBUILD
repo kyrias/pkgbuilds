@@ -1,5 +1,5 @@
 pkgname=yalc-git
-pkgver=0.0.1.rc1.r0.gb4d1c2d
+pkgver=0.0.1.rc1.r9.g2bfd6fd
 pkgrel=1
 
 pkgdesc='Yet Another LolCat'
