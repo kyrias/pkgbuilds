@@ -1,5 +1,5 @@
 pkgname=isync-git
-pkgver=1.2.0.r651.f377e7b
+pkgver=1.2.0.r699.a8b26dc
 pkgrel=1
 
 pkgdesc="IMAP mail synchronizer for offline/batch mail editing"
