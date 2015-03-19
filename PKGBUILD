@@ -1,5 +1,5 @@
 pkgname=yawa-git
-pkgver=0.9.0.r12.ga85b594
+pkgver=0.9.0.r15.gb3168ab
 pkgrel=1
 
 pkgdesc='A tool which allows you to compose wallpapers for X.'
