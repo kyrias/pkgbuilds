@@ -1,5 +1,5 @@
 pkgname=kittypack-git
-pkgver=0.r15.cb4edf4
+pkgver=0.r16.2f7daed
 pkgrel=1
 
 pkgdesc="A silly little tool to get info from archlinux.org/packages"
