@@ -1,5 +1,5 @@
 pkgname=ncurses-git
-pkgver=5.9.r182.g1cfa111
+pkgver=5.9.r191.gaefc165
 pkgrel=1
 
 pkgdesc='Unofficial git mirror of snapshots from ftp://invisible-island.net/ncurses/current/'
