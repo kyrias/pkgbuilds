@@ -1,5 +1,5 @@
 pkgname=gvim-hg
-pkgver=7.4.507.r1.9dff716fb9aa
+pkgver=7.4.663.r1.3bd553b9e4bf
 pkgrel=1
 
 pkgdesc='Vi Improved, a highly configurable, improved version of the vi text editor.'
