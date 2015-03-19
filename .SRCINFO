@@ -2,7 +2,7 @@
 # Mon Jun  1 14:56:22 UTC 2015
 pkgbase = vte3-select-text-git
 	pkgdesc = Virtual Terminal Emulator widget for use with GTK3
-	pkgver = 0.38.2.r1.g35070eb
+	pkgver = 0.38.2.r6.g9c27de9
 	pkgrel = 1
 	url = http://www.gnome.org
 	arch = i686
