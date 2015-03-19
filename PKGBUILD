@@ -1,5 +1,5 @@
 pkgname=pkgfile-git
-pkgver=15.2.g387bba4
+pkgver=15.7.g7ace342
 pkgrel=1
 
 pkgdesc="a pacman .files metadata explorer"
