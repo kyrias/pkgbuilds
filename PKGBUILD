@@ -1,5 +1,5 @@
 pkgname=elementary-xfce-icons-git
-pkgver=0.4.r265.gb3e1a8a
+pkgver=0.5.r14.gff841d7
 pkgrel=1
 
 pkgdesc='Elementary icon-theme with improved Xfce support'
