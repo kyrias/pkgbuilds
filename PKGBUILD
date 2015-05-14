@@ -1,6 +1,6 @@
 pkgname=mps-youtube
-pkgver=0.2.1
-pkgrel=2
+pkgver=0.2.4
+pkgrel=1
 
 pkgdesc="Terminal based YouTube jukebox with playlist management"
 url='https://github.com/np1/mps-youtube'
@@ -16,7 +16,7 @@ optdepends=('mpv: Alternative to mplayer for playback'
 install=mps-youtube.install
 source=("https://github.com/np1/mps-youtube/archive/v$pkgver.tar.gz")
 
-sha256sums=('858db8a0c075bcb7f3bab22fbace7e0ce4d1eba142a2d26e8d71ae3503d23249')
+sha256sums=('3ebd1128dcd67754eebfd36f25e36f4dc7bfc9593f08cb30a8cb0b4e4a99f652')
 
 package() {
 	cd mps-youtube-$pkgver
