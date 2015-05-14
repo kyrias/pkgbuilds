@@ -2,7 +2,7 @@
 # Mon Jun  1 14:59:56 UTC 2015
 pkgbase = ncurses-git
 	pkgdesc = Unofficial git mirror of snapshots from ftp://invisible-island.net/ncurses/current/
-	pkgver = 5.9.r191.gaefc165
+	pkgver = 5.9.r199.g8d00601
 	pkgrel = 1
 	url = http://ncurses.scripts.mit.edu/?p=ncurses.git
 	arch = i686
@@ -10,7 +10,9 @@ pkgbase = ncurses-git
 	license = MIT
 	makedepends = git
 	provides = ncurses
+	provides = libncursesw.so
 	conflicts = ncurses
+	conflicts = libncursesw.so
 	source = git://ncurses.scripts.mit.edu/ncurses.git
 	md5sums = SKIP
 

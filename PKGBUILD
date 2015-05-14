@@ -1,5 +1,5 @@
 pkgname=ncurses-git
-pkgver=5.9.r191.gaefc165
+pkgver=5.9.r199.g8d00601
 pkgrel=1
 
 pkgdesc='Unofficial git mirror of snapshots from ftp://invisible-island.net/ncurses/current/'
@@ -9,8 +9,8 @@ license=('MIT')
 
 makedepends=('git')
 
-provides=('ncurses')
-conflicts=('ncurses')
+provides=('ncurses' 'libncursesw.so')
+conflicts=('ncurses' 'libncursesw.so')
 
 source=('git://ncurses.scripts.mit.edu/ncurses.git')
 
