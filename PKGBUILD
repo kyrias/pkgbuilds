@@ -1,5 +1,5 @@
 pkgname=weechat-git
-pkgver=1.1.r160.g6c4b574
+pkgver=1.2.r10.g3262599
 pkgrel=1
 
 pkgdesc="Fast, light & extensible IRC client (curses UI)"
@@ -31,7 +31,7 @@ build() {
 	# https://github.com/weechat/weechat/issues/287
 	export CFLAGS="$CFLAGS -fPIC"
 
-	cmake -DPREFIX=/usr \
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
 	      -DPYTHON_EXECUTABLE=/usr/bin/python2 \
 	      -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so\
 	      -DENABLE_MAN=ON \
