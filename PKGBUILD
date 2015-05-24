@@ -1,5 +1,5 @@
 pkgname=dex-git
-pkgver=0.7.r12.g2d158ca
+pkgver=0.7.r17.ga98fa2f
 pkgrel=1
 
 pkgdesc="Program to execute DesktopEntry files"
