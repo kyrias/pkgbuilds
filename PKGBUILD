@@ -1,5 +1,5 @@
 pkgname=pacman-git
-pkgver=4.2.1.r116.gf34e48a
+pkgver=4.2.1.r160.g3d45293
 pkgrel=1
 
 pkgdesc="A library-based package manager with dependency support. git version."

@@ -2,7 +2,7 @@
 # Mon Jun  1 14:59:49 UTC 2015
 pkgbase = pacman-git
 	pkgdesc = A library-based package manager with dependency support. git version.
-	pkgver = 4.2.1.r116.gf34e48a
+	pkgver = 4.2.1.r160.g3d45293
 	pkgrel = 1
 	url = http://www.archlinux.org/pacman/
 	arch = x86_64
@@ -17,7 +17,7 @@ pkgbase = pacman-git
 	depends = libarchive
 	depends = pacman-mirrorlist
 	optdepends = fakeroot: for makepkg usage as normal user
-	provides = pacman=4.2.1.r116.gf34e48a
+	provides = pacman=4.2.1.r160.g3d45293
 	provides = pacman-contrib
 	provides = libalpm.so
 	conflicts = pacman
