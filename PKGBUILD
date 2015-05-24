@@ -19,7 +19,7 @@ md5sums=('SKIP')
 
 pkgver() {
 	cd j4-dmenu-desktop
-	git describe | sed -E 's/^r//;s/([^-]*-g)/r\1/;s/-/./g'
+	git describe --long --always | sed -E 's/^r//;s/([^-]*-g)/r\1/;s/-/./g'
 }
 
 build() {
