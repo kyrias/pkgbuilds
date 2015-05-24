@@ -1,6 +1,6 @@
 pkgname=mutt-kz-git
-pkgver=1.5.23.1.rc1.r1.gfbca882
-pkgrel=1
+pkgver=1.5.23.1.r0.g3bbcc84
+pkgrel=3
 
 pkgdesc='Small but powerful text-based mail client'
 url='https://github.com/karelzak/mutt-kz'
@@ -14,12 +14,12 @@ makedepends=('git' 'gnupg' 'libxslt')
 conflicts=('mutt')
 provides=('mutt')
 
-source=('git+https://github.com/karelzak/mutt-kz.git' 'xdg.patch'
-        'trash.patch::https://www.cs.oberlin.edu/~kuperman/help/code/patch-1.5.20.bk.trash_folder-purge_message.1.txt')
+options=(strip debug)
+
+source=('git+https://github.com/karelzak/mutt-kz.git' 'xdg.patch')
 
 sha1sums=('SKIP'
-          '8cbae5a7ade3812cbdcb8a8dfabb29b042b7296a'
-          'b63fe4e7ea2a113819558862be1387364ec24213')
+          '8cbae5a7ade3812cbdcb8a8dfabb29b042b7296a')
 
 pkgver() {
 	cd mutt-kz
@@ -29,7 +29,6 @@ pkgver() {
 prepare() {
 	cd mutt-kz
 
-	patch -p1 < "$srcdir/trash.patch"
 	patch -p1 < "$srcdir/xdg.patch"
 }
 

@@ -2,8 +2,8 @@
 # Mon Jun  1 15:02:32 UTC 2015
 pkgbase = mutt-kz-git
 	pkgdesc = Small but powerful text-based mail client
-	pkgver = 1.5.23.1.rc1.r1.gfbca882
-	pkgrel = 1
+	pkgver = 1.5.23.1.r0.g3bbcc84
+	pkgrel = 3
 	url = https://github.com/karelzak/mutt-kz
 	arch = i686
 	arch = x86_64
@@ -22,12 +22,12 @@ pkgbase = mutt-kz-git
 	depends = notmuch-runtime
 	provides = mutt
 	conflicts = mutt
+	options = strip
+	options = debug
 	source = git+https://github.com/karelzak/mutt-kz.git
 	source = xdg.patch
-	source = trash.patch::https://www.cs.oberlin.edu/~kuperman/help/code/patch-1.5.20.bk.trash_folder-purge_message.1.txt
 	sha1sums = SKIP
 	sha1sums = 8cbae5a7ade3812cbdcb8a8dfabb29b042b7296a
-	sha1sums = b63fe4e7ea2a113819558862be1387364ec24213
 
 pkgname = mutt-kz-git
 
