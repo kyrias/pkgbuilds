@@ -1,5 +1,5 @@
 pkgname=ptpst-git
-pkgver=0.r37.36e1852
+pkgver=0.r41.567f3b1
 pkgrel=1
 
 pkgdesc='A small tool to interact with pb deployments'
