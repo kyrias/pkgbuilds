@@ -10,6 +10,7 @@ pkgbase = yawa-git
 	license = GPL
 	makedepends = git
 	makedepends = python-sphinx
+	makedepends = cmake
 	depends = imlib2
 	depends = libx11
 	depends = libbsd
