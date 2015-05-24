@@ -7,8 +7,8 @@ url='https://github.com/karelzak/mutt-kz'
 arch=('i686' 'x86_64')
 license=('GPL')
 
-depends=('gdbm' 'gpgme' 'openssl>=0.9.8e' 'libsasl' 'libidn'
-         'mime-types' 'ncurses' 'notmuch' 'zlib')
+depends=('gdbm' 'gpgme' 'openssl' 'libsasl' 'libidn'
+         'mime-types' 'ncurses' 'zlib' 'notmuch-runtime')
 makedepends=('git' 'gnupg' 'libxslt')
 
 conflicts=('mutt')
