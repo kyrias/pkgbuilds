@@ -1,5 +1,5 @@
 pkgname=qutebrowser-git
-pkgver=0.1.1.r11.g56d844a
+pkgver=0.2.0.r251.gee0eabc
 pkgrel=1
 
 pkgdesc="A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit"
