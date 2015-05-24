@@ -10,7 +10,7 @@ license=('GPL')
 depends=('python>=3.4' 'python-setuptools' 'python-pyqt5>=5.2' 'qt5-base>=5.2'
          'qt5-webkit>=5.2' 'libxkbcommon-x11' 'python-pypeg2' 'python-jinja'
          'python-pygments')
-makedepends=('asciidoc')
+makedepends=('asciidoc' 'source-highlight' 'git')
 optdepends=('python-colorlog: colored logging output'
             'gst-libav: media playback'
             'gst-plugins-base: media playback'

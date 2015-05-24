@@ -9,6 +9,8 @@ pkgbase = qutebrowser-git
 	arch = any
 	license = GPL
 	makedepends = asciidoc
+	makedepends = source-highlight
+	makedepends = git
 	depends = python>=3.4
 	depends = python-setuptools
 	depends = python-pyqt5>=5.2
