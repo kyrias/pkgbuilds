@@ -1,5 +1,5 @@
 pkgname=j4-dmenu-desktop-git
-pkgver=2.11.r9.gb4ce0c7
+pkgver=2.12.r8.g0c4e8f0
 pkgrel=1
 
 pkgdesc="A rewrite of i3-dmenu-desktop, which is much faster"
