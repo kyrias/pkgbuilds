@@ -1,5 +1,5 @@
 pkgname=dunst-git
-pkgver=1.1.0.r18.gf8e1e33
+pkgver=1.1.0.r20.g08fa6ea
 pkgrel=1
 
 pkgdesc="Customizable and lightweight notification-daemon"
