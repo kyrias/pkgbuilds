@@ -1,6 +1,6 @@
 pkgbase=termite-git
 pkgname=('termite-git' 'termite-terminfo-git')
-pkgver=9.r3.gcb3dfb7
+pkgver=10.r2.g7b49576
 pkgrel=1
 
 pkgdesc="A simple VTE-based terminal emulator"
