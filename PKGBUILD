@@ -1,5 +1,5 @@
 pkgname=tty-solitaire-git
-pkgver=0.1.0.r4.g7b127c9
+pkgver=0.2.0
 pkgrel=1
 
 pkgdesc='An ncurses-based Klondike solitaire clone'
