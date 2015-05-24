@@ -2,7 +2,7 @@
 # Mon Jun  1 14:57:51 UTC 2015
 pkgbase = bemenu-git
 	pkgdesc = Dynamic menu library and client program inspired by dmenu
-	pkgver = r201.c2eabf2
+	pkgver = r216.064e937
 	pkgrel = 1
 	url = https://github.com/Cloudef/bemenu
 	arch = i686
