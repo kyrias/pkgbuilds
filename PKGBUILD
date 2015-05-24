@@ -1,5 +1,5 @@
 pkgname=isync-git
-pkgver=1.3.0.r752.bcd43e2
+pkgver=1.3.0.r759.17f3348
 pkgrel=1
 
 pkgdesc="IMAP mail synchronizer for offline/batch mail editing"
@@ -11,7 +11,7 @@ conflicts=('isync')
 replaces=('isync')
 
 depends=('openssl' 'libsasl' 'cyrus-sasl-gssapi')
-makedepends=('perl-timedate')
+makedepends=('git' 'perl-timedate')
 
 source=('git://git.code.sf.net/p/isync/isync')
 
