@@ -2,7 +2,7 @@
 # Mon Jun  1 14:59:56 UTC 2015
 pkgbase = ncurses-git
 	pkgdesc = Unofficial git mirror of snapshots from ftp://invisible-island.net/ncurses/current/
-	pkgver = 5.9.r199.g8d00601
+	pkgver = 5.9.r201.gaabb3a6
 	pkgrel = 1
 	url = http://ncurses.scripts.mit.edu/?p=ncurses.git
 	arch = i686
