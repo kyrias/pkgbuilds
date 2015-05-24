@@ -16,7 +16,7 @@ sha256sums=('SKIP')
 
 pkgver() {
 	cd tty-solitaire
-	git describe --tags | sed 's/^v//; s/-/.r/; s/-/./'
+	git describe --long --tags | sed 's/^v//; s/-/.r/; s/-/./'
 }
 
 build() {
