@@ -45,12 +45,12 @@ build() {
 	    --enable-imap \
 	    --enable-notmuch \
 	    --enable-pgp \
-	    --enable-pop \
 	    --enable-smtp \
+	    --with-gss \
 	    --with-idn \
 	    --with-sasl \
-	    --with-gss \
 	    --with-ssl=/usr
+
 	make
 }
 
