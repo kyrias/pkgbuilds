@@ -2,7 +2,7 @@
 # Mon Jun  1 14:57:27 UTC 2015
 pkgbase = gvim-hg
 	pkgdesc = Vi Improved, a highly configurable, improved version of the vi text editor.
-	pkgver = 7.4.663.r1.3bd553b9e4bf
+	pkgver = 7.4.729.r1.ca3db36a6ed8
 	pkgrel = 1
 	url = http://www.vim.org/
 	arch = i686
