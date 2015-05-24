@@ -11,6 +11,7 @@ pkgbase = yawa-git
 	makedepends = git
 	makedepends = python-sphinx
 	makedepends = cmake
+	makedepends = clang
 	depends = imlib2
 	depends = libx11
 	depends = libbsd

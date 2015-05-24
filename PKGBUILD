@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 license=('GPL')
 
 depends=('imlib2' 'libx11' 'libbsd')
-makedepends=('git' 'python-sphinx' 'cmake')
+makedepends=('git' 'python-sphinx' 'cmake' 'clang')
 
 source=('git+http://git.kyriasis.com/kyrias/yawa')
 
